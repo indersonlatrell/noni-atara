@@ -194,6 +194,10 @@
       color: var(--dark-gold);
     }
 
+    section {
+      padding: 86px 0;
+    }
+
     .hero {
       background:
         radial-gradient(circle at 80% 20%, rgba(196, 154, 69, 0.18), transparent 34%),
@@ -234,7 +238,6 @@
 
     .hero-actions,
     .order-actions,
-    .showcase-actions,
     .section-actions {
       display: flex;
       gap: 14px;
@@ -266,15 +269,18 @@
       box-shadow: 0 34px 90px rgba(0, 0, 0, 0.28);
       border: 1px solid rgba(247, 241, 231, 0.16);
       background: #f4eadc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 560px;
+      max-width: 520px;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      max-height: 680px;
       margin-left: auto;
     }
 
-    section {
-      padding: 86px 0;
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
     }
 
     .hero-proof {
@@ -490,141 +496,82 @@
       font-size: 0.98rem;
     }
 
-    .ingredient-visual {
+    .ingredient-visual-simple {
       background: var(--cream);
+      padding: 76px 0;
     }
 
-    .ingredient-visual-grid {
+    .ingredient-simple-title {
+      margin-bottom: 38px;
+    }
+
+    .ingredient-simple-title h2 {
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ingredient-simple-title p {
+      max-width: 660px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ingredient-simple-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 52px;
-      align-items: center;
-    }
-
-    .ingredient-video-card {
-      border-radius: 32px;
-      overflow: hidden;
-      background: #eadbc8;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(36, 22, 13, 0.08);
-      position: relative;
-    }
-
-    .ingredient-video-card video,
-    .ingredient-video-card img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-    }
-
-    .video-caption {
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      background: rgba(247, 241, 231, 0.88);
-      color: var(--brown);
-      border-radius: 18px;
-      padding: 14px 16px;
-      font: 800 0.78rem Arial, sans-serif;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .ingredient-copy h2 {
-      font-size: clamp(2.2rem, 4vw, 4.4rem);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
-      margin-bottom: 18px;
-    }
-
-    .ingredient-copy p {
-      font-family: Arial, sans-serif;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    .ingredient-card-list {
-      display: grid;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .ingredient-card {
-      background: var(--white);
-      border-radius: 18px;
-      border: 1px solid rgba(36, 22, 13, 0.08);
-      padding: 20px;
-      box-shadow: 0 12px 28px rgba(36, 22, 13, 0.05);
-      display: grid;
-      grid-template-columns: 46px 1fr;
-      gap: 14px;
-      align-items: start;
-    }
-
-    .ingredient-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 999px;
-      background: var(--gold);
-      color: var(--deep-green);
-      display: grid;
-      place-items: center;
-      font: 900 1rem Arial, sans-serif;
-    }
-
-    .ingredient-card h3 {
-      font-size: 1.35rem;
-      line-height: 1.1;
-      margin-bottom: 5px;
-    }
-
-    .ingredient-card p {
-      margin: 0;
-      font-size: 0.95rem;
-    }
-
-    .ingredient-tiles {
-      background: var(--warm-cream);
-      padding: 70px 0;
-    }
-
-    .tile-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .ingredient-tile {
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 22px;
-      overflow: hidden;
+    .ingredient-feature {
+      background: var(--white);
       border: 1px solid rgba(36, 22, 13, 0.08);
-      box-shadow: 0 10px 28px rgba(36, 22, 13, 0.05);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(36, 22, 13, 0.06);
     }
 
-    .ingredient-tile img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
+    .ingredient-feature-media {
       background: #eadbc8;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
     }
 
-    .tile-copy {
-      padding: 22px;
-      text-align: center;
+    .ingredient-feature-media video,
+    .ingredient-feature-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .tile-copy h3 {
-      font-size: 1.35rem;
-      line-height: 1.1;
-      margin-bottom: 8px;
+    .ingredient-feature-copy {
+      padding: 24px;
     }
 
-    .tile-copy p {
+    .ingredient-feature-copy span {
+      display: block;
+      color: var(--dark-gold);
+      font: 800 0.72rem Arial, sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .ingredient-feature-copy h3 {
+      font-size: 1.55rem;
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+
+    .ingredient-feature-copy p {
       color: var(--muted);
       font-family: Arial, sans-serif;
-      font-size: 0.94rem;
+      font-size: 0.95rem;
+    }
+
+    .ingredient-simple-actions {
+      justify-content: center;
+      margin-top: 34px;
     }
 
     .ritual-videos {
@@ -953,7 +900,6 @@
         display: none;
       }
 
-      .tile-grid,
       .ritual-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -967,7 +913,6 @@
       .hero-grid,
       .order-card,
       .proof-card,
-      .ingredient-visual-grid,
       .who-grid,
       .testimonial-grid,
       .delivery-card,
@@ -989,8 +934,13 @@
         justify-content: flex-start;
       }
 
-      .conversion-grid {
+      .conversion-grid,
+      .ingredient-simple-grid {
         grid-template-columns: 1fr;
+      }
+
+      .ingredient-feature-media {
+        aspect-ratio: 16 / 10;
       }
 
       section {
@@ -1041,7 +991,6 @@
 
       .hero-actions,
       .order-actions,
-      .showcase-actions,
       .section-actions {
         flex-direction: column;
       }
@@ -1063,18 +1012,8 @@
       }
 
       .order-meta,
-      .tile-grid,
       .ritual-grid {
         grid-template-columns: 1fr;
-      }
-
-      .ingredient-card {
-        grid-template-columns: 40px 1fr;
-      }
-
-      .ingredient-icon {
-        width: 40px;
-        height: 40px;
       }
     }
   </style>
@@ -1284,129 +1223,79 @@
       </div>
     </section>
 
-    <section id="ingredients" class="ingredient-visual">
-      <div class="container ingredient-visual-grid">
-        <div class="ingredient-video-card">
-          <video
-            src="videos/noni-ingredient-story.mp4"
-            poster="images/noni-ingredient-poster.jpg"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            aria-label="Noni Atara ingredient video"
-          ></video>
-          <div class="video-caption" data-i18n="ingredient_video_caption">
-            Botanische voeding met een lichte, luxe finish
-          </div>
-        </div>
-
-        <div class="ingredient-copy">
+    <section id="ingredients" class="ingredient-visual-simple">
+      <div class="container">
+        <div class="section-title ingredient-simple-title">
           <div class="eyebrow" data-i18n="ingredient_visual_eyebrow">Botanische kern</div>
           <h2 data-i18n="ingredient_visual_title">
-            De kracht van Noni Atara begint bij de ingrediënten.
+            De kracht van Noni Atara begint bij noni.
           </h2>
           <p data-i18n="ingredient_visual_intro">
-            Noni Atara Face Oil is ontwikkeld als een lichte, voedende laatste stap in je routine.
-            De formule combineert botanische ingrediënten die je huid helpen comfortabel, zacht en
-            stralend aan te laten voelen.
-          </p>
-
-          <div class="ingredient-card-list">
-            <article class="ingredient-card">
-              <div class="ingredient-icon">01</div>
-              <div>
-                <h3 data-i18n="ingredient_card_1_title">Noni Seed Oil</h3>
-                <p data-i18n="ingredient_card_1_copy">
-                  De botanische held van de formule, gekozen om de huid gevoed, verzorgd en comfortabel aan te laten voelen.
-                </p>
-              </div>
-            </article>
-
-            <article class="ingredient-card">
-              <div class="ingredient-icon">02</div>
-              <div>
-                <h3 data-i18n="ingredient_card_2_title">Citrus Peel Extract</h3>
-                <p data-i18n="ingredient_card_2_copy">
-                  Voor een frisse, stralende uitstraling en een glow die luxe aanvoelt zonder zwaar te zijn.
-                </p>
-              </div>
-            </article>
-
-            <article class="ingredient-card">
-              <div class="ingredient-icon">03</div>
-              <div>
-                <h3 data-i18n="ingredient_card_3_title">Lichte textuur</h3>
-                <p data-i18n="ingredient_card_3_copy">
-                  Trekt mooi in en werkt het best als laatste stap na moisturizer.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="section-actions">
-            <a href="#" class="btn btn-primary" data-i18n="hero_cta_primary" data-whatsapp-order>
-              Shop Noni Atara Face Oil
-            </a>
-            <a href="#how-to-use" class="btn btn-dark-outline" data-i18n="nav_how">
-              Gebruik
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ingredient-tiles">
-      <div class="container">
-        <div class="section-title">
-          <div class="eyebrow" data-i18n="tiles_eyebrow">Skin-loving botanicals</div>
-          <h2 data-i18n="tiles_title">Een eenvoudige formule met een luxe huidgevoel.</h2>
-          <p data-i18n="tiles_intro">
-            Maak de ingrediënten snel herkenbaar met visuele tegels. Vervang de afbeeldingen hieronder door jouw eigen botanische beelden.
+            Een lichte botanische face oil met noni seed oil en citrus peel extract,
+            ontwikkeld als voedende laatste stap voor een zachte, comfortabele glow.
           </p>
         </div>
 
-        <div class="tile-grid">
-          <article class="ingredient-tile">
-            <img src="images/ingredient-noni.jpg" alt="Noni vrucht" loading="lazy" />
-            <div class="tile-copy">
-              <h3 data-i18n="tile_1_title">Noni</h3>
-              <p data-i18n="tile_1_copy">
-                De botanische inspiratie achter Noni Atara.
+        <div class="ingredient-simple-grid">
+          <article class="ingredient-feature">
+            <div class="ingredient-feature-media">
+              <video
+                src="videos/noni-ingredient-story.mp4"
+                poster="images/noni-ingredient-poster.jpg"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Noni Atara ingredient video"
+              ></video>
+            </div>
+
+            <div class="ingredient-feature-copy">
+              <span data-i18n="ingredient_feature_label">Hero ingredient</span>
+              <h3 data-i18n="ingredient_card_1_title">Noni Seed Oil</h3>
+              <p data-i18n="ingredient_card_1_copy">
+                De botanische held van de formule, gekozen om de huid gevoed, verzorgd en comfortabel aan te laten voelen.
               </p>
             </div>
           </article>
 
-          <article class="ingredient-tile">
-            <img src="images/ingredient-citrus.jpg" alt="Citrus peel extract" loading="lazy" />
-            <div class="tile-copy">
-              <h3 data-i18n="tile_2_title">Citrus Peel</h3>
-              <p data-i18n="tile_2_copy">
-                Voor een frisse, radiant ogende glow.
+          <article class="ingredient-feature">
+            <div class="ingredient-feature-media">
+              <img src="images/ingredient-citrus.jpg" alt="Citrus peel extract" loading="lazy" />
+            </div>
+
+            <div class="ingredient-feature-copy">
+              <span data-i18n="ingredient_feature_label_2">Glow support</span>
+              <h3 data-i18n="ingredient_card_2_title">Citrus Peel Extract</h3>
+              <p data-i18n="ingredient_card_2_copy">
+                Voor een frisse, stralende uitstraling en een glow die luxe aanvoelt zonder zwaar te zijn.
               </p>
             </div>
           </article>
 
-          <article class="ingredient-tile">
-            <img src="images/ingredient-oil-texture.jpg" alt="Lichte olie textuur" loading="lazy" />
-            <div class="tile-copy">
-              <h3 data-i18n="tile_3_title">Lichte olieblend</h3>
-              <p data-i18n="tile_3_copy">
-                Ontworpen voor comfort zonder zware finish.
-              </p>
+          <article class="ingredient-feature">
+            <div class="ingredient-feature-media">
+              <img src="images/ingredient-oil-texture.jpg" alt="Lichte olie textuur" loading="lazy" />
             </div>
-          </article>
 
-          <article class="ingredient-tile">
-            <img src="images/ingredient-botanicals.jpg" alt="Botanische huidverzorging" loading="lazy" />
-            <div class="tile-copy">
-              <h3 data-i18n="tile_4_title">Botanisch ritueel</h3>
-              <p data-i18n="tile_4_copy">
-                Een kalme laatste stap in je skincare routine.
+            <div class="ingredient-feature-copy">
+              <span data-i18n="ingredient_feature_label_3">Textuur</span>
+              <h3 data-i18n="ingredient_card_3_title">Lichte textuur</h3>
+              <p data-i18n="ingredient_card_3_copy">
+                Trekt mooi in en werkt het best als laatste stap na moisturizer.
               </p>
             </div>
           </article>
+        </div>
+
+        <div class="section-actions ingredient-simple-actions">
+          <a href="#" class="btn btn-primary" data-i18n="hero_cta_primary" data-whatsapp-order>
+            Shop Noni Atara Face Oil
+          </a>
+          <a href="#how-to-use" class="btn btn-dark-outline" data-i18n="nav_how">
+            Gebruik
+          </a>
         </div>
       </div>
     </section>
@@ -1784,28 +1673,18 @@
         conv_3_title: "Ideaal voor een glow ritual",
         conv_3_copy: "Perfect voor een korte gezichtsmassage of als luxe afsluiting van je skincare.",
 
-        ingredient_video_caption: "Botanische voeding met een lichte, luxe finish",
         ingredient_visual_eyebrow: "Botanische kern",
-        ingredient_visual_title: "De kracht van Noni Atara begint bij de ingrediënten.",
-        ingredient_visual_intro: "Noni Atara Face Oil is ontwikkeld als een lichte, voedende laatste stap in je routine. De formule combineert botanische ingrediënten die je huid helpen comfortabel, zacht en stralend aan te laten voelen.",
+        ingredient_visual_title: "De kracht van Noni Atara begint bij noni.",
+        ingredient_visual_intro: "Een lichte botanische face oil met noni seed oil en citrus peel extract, ontwikkeld als voedende laatste stap voor een zachte, comfortabele glow.",
+        ingredient_feature_label: "Hero ingredient",
+        ingredient_feature_label_2: "Glow support",
+        ingredient_feature_label_3: "Textuur",
         ingredient_card_1_title: "Noni Seed Oil",
         ingredient_card_1_copy: "De botanische held van de formule, gekozen om de huid gevoed, verzorgd en comfortabel aan te laten voelen.",
         ingredient_card_2_title: "Citrus Peel Extract",
         ingredient_card_2_copy: "Voor een frisse, stralende uitstraling en een glow die luxe aanvoelt zonder zwaar te zijn.",
         ingredient_card_3_title: "Lichte textuur",
         ingredient_card_3_copy: "Trekt mooi in en werkt het best als laatste stap na moisturizer.",
-
-        tiles_eyebrow: "Skin-loving botanicals",
-        tiles_title: "Een eenvoudige formule met een luxe huidgevoel.",
-        tiles_intro: "Maak de ingrediënten snel herkenbaar met visuele tegels. Vervang de afbeeldingen hieronder door jouw eigen botanische beelden.",
-        tile_1_title: "Noni",
-        tile_1_copy: "De botanische inspiratie achter Noni Atara.",
-        tile_2_title: "Citrus Peel",
-        tile_2_copy: "Voor een frisse, radiant ogende glow.",
-        tile_3_title: "Lichte olieblend",
-        tile_3_copy: "Ontworpen voor comfort zonder zware finish.",
-        tile_4_title: "Botanisch ritueel",
-        tile_4_copy: "Een kalme laatste stap in je skincare routine.",
 
         ritual_eyebrow: "Jouw glow ritual",
         ritual_title: "Zo gebruik je Noni Atara.",
@@ -1939,28 +1818,18 @@
         conv_3_title: "Ideal for a glow ritual",
         conv_3_copy: "Perfect for a short facial massage or as a luxurious finish to your skincare.",
 
-        ingredient_video_caption: "Botanical nourishment with a light, luxurious finish",
         ingredient_visual_eyebrow: "Botanical core",
-        ingredient_visual_title: "The power of Noni Atara starts with the ingredients.",
-        ingredient_visual_intro: "Noni Atara Face Oil is designed as a lightweight, nourishing final step in your routine. The formula combines botanical ingredients that help skin feel comfortable, soft, and radiant.",
+        ingredient_visual_title: "The power of Noni Atara starts with noni.",
+        ingredient_visual_intro: "A lightweight botanical face oil with noni seed oil and citrus peel extract, designed as a nourishing final step for a soft, comfortable glow.",
+        ingredient_feature_label: "Hero ingredient",
+        ingredient_feature_label_2: "Glow support",
+        ingredient_feature_label_3: "Texture",
         ingredient_card_1_title: "Noni Seed Oil",
         ingredient_card_1_copy: "The botanical hero of the formula, chosen to help skin feel nourished, cared for, and comfortable.",
         ingredient_card_2_title: "Citrus Peel Extract",
         ingredient_card_2_copy: "For a fresh, radiant-looking glow that feels luxurious without heaviness.",
         ingredient_card_3_title: "Lightweight texture",
         ingredient_card_3_copy: "Absorbs beautifully and works best as the final step after moisturizer.",
-
-        tiles_eyebrow: "Skin-loving botanicals",
-        tiles_title: "A simple formula with a luxurious skin feel.",
-        tiles_intro: "Make the ingredients instantly recognizable with visual tiles. Replace the images below with your own botanical visuals.",
-        tile_1_title: "Noni",
-        tile_1_copy: "The botanical inspiration behind Noni Atara.",
-        tile_2_title: "Citrus Peel",
-        tile_2_copy: "For a fresh, radiant-looking glow.",
-        tile_3_title: "Light oil blend",
-        tile_3_copy: "Designed for comfort without a heavy finish.",
-        tile_4_title: "Botanical ritual",
-        tile_4_copy: "A calm final step in your skincare routine.",
 
         ritual_eyebrow: "Your glow ritual",
         ritual_title: "How to use Noni Atara.",
