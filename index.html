@@ -713,6 +713,198 @@
       display: none;
     }
 
+        .hero-proof {
+      background: var(--cream);
+      margin-top: -34px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .proof-card {
+      background: var(--white);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      padding: 24px 30px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .proof-quote {
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      line-height: 1.25;
+      color: var(--brown);
+    }
+
+    .proof-meta {
+      font: 700 0.82rem Arial, sans-serif;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 8px;
+    }
+
+    .proof-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      font-family: Arial, sans-serif;
+    }
+
+    .proof-point {
+      background: var(--warm-cream);
+      color: var(--brown);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .order-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 22px 0 26px;
+      font-family: Arial, sans-serif;
+    }
+
+    .meta-box {
+      background: var(--cream);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .meta-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .meta-value {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--brown);
+    }
+
+    .scarcity-line {
+      margin-top: 14px;
+      background: rgba(196, 154, 69, 0.14);
+      color: var(--brown);
+      border: 1px solid rgba(196, 154, 69, 0.32);
+      border-radius: 14px;
+      padding: 13px 15px;
+      font: 700 0.9rem Arial, sans-serif;
+    }
+
+    .conversion-band {
+      background: var(--warm-cream);
+      padding: 54px 0;
+    }
+
+    .conversion-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .conversion-card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 10px 28px rgba(36, 22, 13, 0.05);
+    }
+
+    .conversion-card h3 {
+      font-size: 1.45rem;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .conversion-card p {
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .objection-box {
+      margin-top: 28px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .objection-box h3 {
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .objection-list {
+      display: grid;
+      gap: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .objection-list li {
+      list-style: none;
+      color: var(--muted);
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+    }
+
+    .objection-list li::before {
+      content: "✓";
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--deep-green);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    @media (max-width: 900px) {
+      .proof-card,
+      .objection-box {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-points {
+        justify-content: flex-start;
+      }
+
+      .conversion-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .proof-card {
+        padding: 22px;
+      }
+
+      .order-meta {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 1040px) {
       .nav-links {
         display: none;
@@ -879,21 +1071,73 @@
             voor een natuurlijke, gezonde glow.
           </p>
 
-          <div class="hero-actions">
-            <a href="#" class="btn btn-primary" data-i18n="hero_cta_primary" data-whatsapp-order>
-              Bestel Noni Atara
-            </a>
-            <a href="#ingredients" class="btn btn-secondary" data-i18n="hero_cta_secondary">
-              Bekijk voordelen
-            </a>
-          </div>
+          <section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow" data-i18n="hero_eyebrow">
+        Surinaamse botanische gezichtsolie
+      </div>
 
-          <div class="trust-row" aria-label="Product highlights">
-            <span class="trust-pill" data-i18n="trust_1">Licht & snel absorberend</span>
-            <span class="trust-pill" data-i18n="trust_2">Geen synthetische geur</span>
-            <span class="trust-pill" data-i18n="trust_3">Levering binnen Paramaribo + SRD 100</span>
-          </div>
+      <h1 data-i18n="hero_title">
+        Geef je huid een zachte, natuurlijke glow.
+      </h1>
+
+      <p class="hero-copy" data-i18n="hero_copy">
+        Noni Atara Face Oil is een lichte botanische gezichtsolie voor een droge,
+        doffe of trekkerige huid — gemaakt om je huid comfortabeler, soepeler en
+        stralender te laten aanvoelen zonder zwaar vet gevoel.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary" data-i18n="hero_cta_primary" data-whatsapp-order>
+          Shop Noni Atara Face Oil
+        </a>
+        <a href="#ingredients" class="btn btn-secondary" data-i18n="hero_cta_secondary">
+          Bekijk ingrediënten
+        </a>
+      </div>
+
+      <div class="trust-row" aria-label="Product highlights">
+        <span class="trust-pill" data-i18n="trust_1">Voor droge & doffe huid</span>
+        <span class="trust-pill" data-i18n="trust_2">1–2 druppels per gebruik</span>
+        <span class="trust-pill" data-i18n="trust_3">Levering Paramaribo + SRD 100</span>
+        <span class="trust-pill" data-i18n="trust_4">Bestellen via WhatsApp</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="images/mipro-age-beautifully.png"
+        alt="Mipro Noni Atara Face Oil met botanische ingrediënten"
+        loading="eager"
+        width="768"
+        height="1344"
+      />
+    </div>
+  </div>
+</section>
+          <section class="hero-proof">
+  <div class="container">
+    <div class="proof-card">
+      <div>
+        <div class="stars">★★★★★</div>
+        <div class="proof-quote" data-i18n="proof_quote">
+          “Mijn huid voelt zachter zonder vettig aan te voelen.”
         </div>
+        <div class="proof-meta" data-i18n="proof_meta">
+          Voeg hier echte klantreview toe zodra beschikbaar
+        </div>
+      </div>
+
+      <div class="proof-points">
+        <span class="proof-point" data-i18n="proof_1">Lichte glow-finish</span>
+        <span class="proof-point" data-i18n="proof_2">Geen synthetische geur</span>
+        <span class="proof-point" data-i18n="proof_3">Patch test aanbevolen</span>
+        <span class="proof-point" data-i18n="proof_4">Veilig bestellen via WhatsApp</span>
+      </div>
+    </div>
+  </div>
+</section>
 
         <div class="hero-image">
           <img
