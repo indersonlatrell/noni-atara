@@ -1,38 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mipro Noni Atara | Surinamese Botanical Face Oil</title>
-
+  <title data-i18n="meta_title">Mipro Noni Atara Face Oil | Surinaamse botanische huidverzorging</title>
   <meta
     name="description"
-    content="Mipro Noni Atara is a Surinamese botanical face oil made for soft, nourished, radiant-looking skin. Order locally through WhatsApp."
+    content="Een lichte Surinaamse botanische gezichtsolie met noni, kokos, marula en avocado voor een zachte, gevoede glow."
+    data-i18n-content="meta_description"
   />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
 
   <style>
     :root {
-      --deep: #1A1208;
-      --forest: #2C3A1E;
-      --moss: #4A5E30;
-      --sage: #8A9E6A;
-      --mist: #EAF0E0;
-      --ivory: #F8F4EC;
-      --cream: #FDF9F2;
-      --gold: #C8A84B;
-      --gold-light: #E8D08A;
-      --bark: #6B4F2A;
-      --sand: #D4C4A0;
-      --white: #FFFFFF;
-      --whatsapp: #25D366;
+      --green: #1d2f1a;
+      --deep-green: #101b0f;
+      --cream: #f7f1e7;
+      --warm-cream: #efe4d3;
+      --gold: #c49a45;
+      --dark-gold: #98722d;
+      --brown: #24160d;
+      --muted: #756b5f;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(29, 47, 26, 0.12);
+      --radius: 22px;
+      --max: 1180px;
     }
 
     * {
@@ -46,14 +38,14 @@
     }
 
     body {
-      font-family: "Jost", sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
       background: var(--cream);
-      color: var(--deep);
+      color: var(--brown);
       line-height: 1.6;
     }
 
     img {
-      width: 100%;
+      max-width: 100%;
       display: block;
     }
 
@@ -62,775 +54,765 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
-
     .container {
-      width: min(1120px, calc(100% - 32px));
+      width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
     }
 
     .announcement {
       background: var(--gold);
-      color: var(--deep);
+      color: var(--deep-green);
       text-align: center;
-      padding: 9px 16px;
-      font-size: 11px;
-      letter-spacing: 0.14em;
+      font: 700 0.76rem Arial, sans-serif;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-weight: 700;
+      padding: 9px 16px;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(26, 18, 8, 0.94);
+      background: rgba(29, 47, 26, 0.96);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(200, 168, 75, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav {
-      min-height: 68px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      color: var(--cream);
+      gap: 20px;
     }
 
     .logo {
+      font-size: 1rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav-right {
       display: flex;
       align-items: center;
-      gap: 12px;
-      color: var(--ivory);
-    }
-
-    .logo-mark {
-      width: 34px;
-      height: 38px;
-      border: 1px solid var(--gold);
-      border-radius: 50% 50% 46% 46%;
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 19px;
-      line-height: 1;
-    }
-
-    .logo-text {
-      font-family: "Cormorant Garamond", serif;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 19px;
-      font-weight: 300;
+      gap: 20px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
-      color: var(--sand);
-      font-size: 11px;
+      gap: 26px;
+      font: 600 0.82rem Arial, sans-serif;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.08em;
     }
 
     .nav-links a {
-      transition: color 0.2s ease;
+      opacity: 0.82;
     }
 
     .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--deep);
-      padding: 10px 17px;
-      border-radius: 2px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 700;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .nav-cta:hover {
-      background: var(--gold-light);
-      transform: translateY(-1px);
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at 12% 12%, rgba(200, 168, 75, 0.18), transparent 30%),
-        linear-gradient(135deg, #1A1208 0%, #2C3A1E 100%);
-      color: var(--ivory);
-      padding: 74px 0 64px;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 0.9fr;
-      align-items: center;
-      gap: 56px;
-    }
-
-    .eyebrow,
-    .section-kicker {
+      opacity: 1;
       color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.28em;
-      font-size: 10px;
-      margin-bottom: 15px;
-      font-weight: 700;
     }
 
-    h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(48px, 6vw, 76px);
-      line-height: 0.96;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      color: var(--sand);
-      max-width: 520px;
-      font-size: 18px;
-      font-weight: 300;
-      margin-bottom: 30px;
-    }
-
-    .button-row {
+    .language-switcher {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
       align-items: center;
+      gap: 6px;
+      padding: 4px;
+      border: 1px solid rgba(247, 241, 231, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      font-family: Arial, sans-serif;
+    }
+
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: rgba(247, 241, 231, 0.72);
+      cursor: pointer;
+      padding: 8px 11px;
+      border-radius: 999px;
+      font: 800 0.72rem Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .lang-btn.active {
+      background: var(--gold);
+      color: var(--deep-green);
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
-      padding: 0 22px;
-      border-radius: 2px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 700;
-      cursor: pointer;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 999px;
       border: 1px solid transparent;
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
+      font: 800 0.78rem Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s ease;
+      text-align: center;
     }
 
     .btn-primary {
       background: var(--gold);
-      color: var(--deep);
+      color: var(--deep-green);
+      box-shadow: 0 10px 24px rgba(196, 154, 69, 0.24);
     }
 
     .btn-primary:hover {
-      background: var(--gold-light);
+      background: #d8ae59;
+      transform: translateY(-1px);
     }
 
-    .btn-ghost {
-      border-color: rgba(248, 244, 236, 0.34);
-      color: var(--ivory);
+    .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.28);
+      color: var(--cream);
     }
 
-    .btn-ghost:hover {
+    .btn-secondary:hover {
       border-color: var(--gold);
-      color: var(--gold-light);
+      color: var(--gold);
     }
 
-    .btn-outline {
+    .btn-dark-outline {
+      border-color: rgba(36, 22, 13, 0.18);
+      color: var(--brown);
+    }
+
+    .btn-dark-outline:hover {
       border-color: var(--gold);
-      color: var(--deep);
-      background: transparent;
+      color: var(--dark-gold);
     }
 
-    .btn-outline:hover {
-      background: var(--gold);
+    .hero {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(196, 154, 69, 0.18), transparent 34%),
+        linear-gradient(135deg, var(--deep-green), var(--green));
+      color: var(--cream);
+      padding: 88px 0 72px;
     }
 
-    .hero-photo {
-      max-width: 500px;
-      justify-self: end;
-      border: 1px solid rgba(200, 168, 75, 0.26);
-      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
-      overflow: hidden;
-      background: var(--deep);
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 58px;
     }
 
-    .hero-photo img {
-      height: 480px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    section {
-      padding: 72px 0;
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 38px;
-    }
-
-    .section-heading.center {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    h2 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(38px, 4.6vw, 56px);
-      line-height: 1;
-      font-weight: 400;
-      letter-spacing: -0.02em;
+    .eyebrow {
+      color: var(--gold);
+      font: 800 0.75rem Arial, sans-serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
       margin-bottom: 16px;
     }
 
-    .section-heading p {
-      color: var(--bark);
-      font-size: 17px;
-      font-weight: 300;
-    }
-
-    .shop-card {
-      display: grid;
-      grid-template-columns: 0.78fr 1.22fr;
-      gap: 0;
-      background: var(--ivory);
-      border: 1px solid var(--mist);
-      box-shadow: 0 20px 54px rgba(26, 18, 8, 0.07);
-      overflow: hidden;
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
-    .shop-image {
-      background: #F3E8D8;
-      min-height: 420px;
-      overflow: hidden;
-    }
-
-    .shop-image img {
-      height: 100%;
-      min-height: 420px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .shop-content {
-      padding: 44px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .product-title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 42px;
-      line-height: 1;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-
-    .product-meta {
-      color: var(--sage);
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 11px;
-      margin-bottom: 22px;
-      font-weight: 600;
-    }
-
-    .price {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 32px;
-      color: var(--gold);
-      margin-bottom: 22px;
-    }
-
-    .product-description {
-      color: var(--bark);
-      font-size: 16px;
-      font-weight: 300;
-      margin-bottom: 26px;
-    }
-
-    .quantity {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    h1 {
+      font-size: clamp(3rem, 6vw, 6.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+      max-width: 780px;
       margin-bottom: 24px;
     }
 
-    .quantity button {
-      width: 38px;
-      height: 38px;
-      border: 1px solid var(--mist);
-      background: var(--cream);
-      color: var(--deep);
-      font-size: 19px;
-      cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
+    .hero-copy {
+      font-size: 1.15rem;
+      max-width: 620px;
+      color: rgba(247, 241, 231, 0.84);
+      margin-bottom: 30px;
     }
 
-    .quantity button:hover {
-      background: var(--gold);
-      border-color: var(--gold);
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
     }
 
-    .quantity span {
-      min-width: 30px;
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: rgba(247, 241, 231, 0.82);
+      font: 600 0.85rem Arial, sans-serif;
+    }
+
+    .trust-pill {
+      border: 1px solid rgba(247, 241, 231, 0.18);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .hero-card {
+      background: rgba(247, 241, 231, 0.08);
+      border: 1px solid rgba(247, 241, 231, 0.16);
+      border-radius: 32px;
+      padding: 18px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .product-visual {
+      min-height: 520px;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(247, 241, 231, 0.2), rgba(196, 154, 69, 0.12)),
+        url("https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bottle-card {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      background: rgba(247, 241, 231, 0.92);
+      color: var(--brown);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .bottle-card strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 5px;
+    }
+
+    .bottle-card span {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    .section-title {
       text-align: center;
-      font-size: 17px;
+      max-width: 740px;
+      margin: 0 auto 44px;
     }
 
-    .order-note {
-      margin-top: 16px;
-      color: var(--sage);
-      font-size: 13px;
+    .section-title h2 {
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 14px;
     }
 
-    .benefit-grid {
+    .section-title p {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+    }
+
+    .order-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 0;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid rgba(36, 22, 13, 0.08);
+    }
+
+    .order-image {
+      background:
+        linear-gradient(rgba(36, 22, 13, 0.05), rgba(36, 22, 13, 0.05)),
+        url("https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=1000&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 460px;
+    }
+
+    .order-content {
+      padding: clamp(30px, 5vw, 56px);
+    }
+
+    .order-content h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font: 800 1.15rem Arial, sans-serif;
+      color: var(--dark-gold);
+      margin-bottom: 20px;
+    }
+
+    .order-content p {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      margin-bottom: 24px;
+    }
+
+    .benefit-list {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 28px;
+      font-family: Arial, sans-serif;
+    }
+
+    .benefit-list li {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #44382d;
+    }
+
+    .benefit-list li::before {
+      content: "✓";
+      color: var(--dark-gold);
+      font-weight: 900;
+    }
+
+    .order-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .microcopy {
+      font: 600 0.85rem Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .features {
+      background: var(--warm-cream);
+    }
+
+    .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .benefit-card {
-      background: var(--ivory);
-      border: 1px solid var(--mist);
+    .feature {
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(36, 22, 13, 0.07);
+      border-radius: 18px;
       padding: 28px;
     }
 
-    .benefit-card span {
-      color: var(--gold);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-weight: 700;
+    .feature h3 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
     }
 
-    .benefit-card h3 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 28px;
-      font-weight: 500;
-      margin: 10px 0;
-      line-height: 1.05;
+    .feature p {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
     }
 
-    .benefit-card p {
-      color: var(--bark);
-      font-weight: 300;
-      font-size: 15px;
-    }
-
-    .image-feature {
-      padding-top: 0;
-      padding-bottom: 72px;
-    }
-
-    .feature-image-card {
-      overflow: hidden;
-      border: 1px solid var(--mist);
-      box-shadow: 0 18px 46px rgba(26, 18, 8, 0.07);
-      background: var(--ivory);
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .feature-image-card img {
-      height: 520px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .dark-section {
-      background: var(--forest);
-      color: var(--ivory);
-    }
-
-    .dark-section h2 {
-      color: var(--ivory);
-    }
-
-    .dark-section p {
-      color: var(--sand);
-    }
-
-    .ritual-split {
-      display: grid;
-      grid-template-columns: 0.95fr 0.95fr;
-      align-items: center;
-      gap: 54px;
-    }
-
-    .ritual-intro {
-      color: var(--sand);
-      font-size: 17px;
-      font-weight: 300;
-      margin-bottom: 26px;
-      max-width: 520px;
-    }
-
-    .ritual-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .ritual-list div {
-      color: var(--sand);
-      font-size: 16px;
-      font-weight: 300;
-    }
-
-    .ritual-list strong {
-      color: var(--gold);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 27px;
-      margin-right: 12px;
-      font-weight: 600;
-    }
-
-    .ritual-photo {
-      overflow: hidden;
-      border: 1px solid rgba(200, 168, 75, 0.26);
-      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.22);
-      max-width: 520px;
-      justify-self: end;
-    }
-
-    .ritual-photo img {
-      height: 500px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .problem-section {
-      background: var(--cream);
-    }
-
-    .problem-card {
-      display: grid;
-      grid-template-columns: 1fr 0.78fr;
-      gap: 46px;
-      align-items: center;
-      background: var(--ivory);
-      border: 1px solid var(--mist);
-      padding: 46px;
-      box-shadow: 0 18px 46px rgba(26, 18, 8, 0.06);
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .problem-card p {
-      color: var(--bark);
-      font-size: 17px;
-      font-weight: 300;
-      margin-bottom: 26px;
-      max-width: 520px;
-    }
-
-    .problem-image {
-      overflow: hidden;
-      justify-self: end;
-      max-width: 390px;
-      border: 1px solid rgba(26, 18, 8, 0.08);
-    }
-
-    .problem-image img {
-      height: 430px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .local-box {
-      background: var(--deep);
-      color: var(--ivory);
-      padding: 52px;
+    .ingredients-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 46px;
-      align-items: start;
-      max-width: 980px;
-      margin: 0 auto;
+      gap: 44px;
+      align-items: center;
     }
 
-    .local-box h2 {
-      color: var(--ivory);
+    .ingredient-list {
+      display: grid;
+      gap: 18px;
     }
 
-    .local-box p {
-      color: var(--sand);
-      font-weight: 300;
+    .ingredient {
+      padding: 24px;
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(36, 22, 13, 0.06);
+      border: 1px solid rgba(36, 22, 13, 0.06);
     }
 
-    .local-list {
+    .ingredient h3 {
+      margin-bottom: 6px;
+      color: var(--brown);
+    }
+
+    .ingredient p {
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .ingredient-image {
+      border-radius: 28px;
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(29, 47, 26, 0.08), rgba(29, 47, 26, 0.08)),
+        url("https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1100&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .how-to {
+      background: var(--green);
+      color: var(--cream);
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .how-to h2 {
+      font-size: clamp(2.3rem, 4vw, 4.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+
+    .how-to p {
+      color: rgba(247, 241, 231, 0.78);
+      font-family: Arial, sans-serif;
+      margin-bottom: 26px;
+    }
+
+    .steps {
+      counter-reset: step;
       display: grid;
       gap: 16px;
     }
 
-    .local-item {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      color: var(--sand);
-      font-weight: 300;
-      font-size: 15px;
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      align-items: start;
     }
 
-    .local-item strong {
-      color: var(--gold);
-      display: block;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
+    .step::before {
+      content: "0" counter(step);
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
       background: var(--gold);
-      border-radius: 50%;
-      margin-top: 9px;
-      flex: 0 0 auto;
+      color: var(--deep-green);
+      display: grid;
+      place-items: center;
+      font: 900 0.9rem Arial, sans-serif;
     }
 
-    .faq {
+    .step strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.18rem;
+    }
+
+    .step span {
+      color: rgba(247, 241, 231, 0.72);
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .who-card {
+      background: var(--white);
+      padding: 34px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .who-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+    }
+
+    .who-card ul {
       display: grid;
       gap: 12px;
-      max-width: 780px;
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      padding-left: 18px;
+    }
+
+    .testimonial-section {
+      background: var(--warm-cream);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 32px rgba(36, 22, 13, 0.06);
+    }
+
+    .stars {
+      color: var(--dark-gold);
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .testimonial p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .testimonial span {
+      color: var(--muted);
+      font: 700 0.85rem Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .delivery {
+      background: var(--brown);
+      color: var(--cream);
+    }
+
+    .delivery-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .delivery h2 {
+      font-size: clamp(2.2rem, 4vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+      margin-bottom: 16px;
+    }
+
+    .delivery p,
+    .delivery li {
+      color: rgba(247, 241, 231, 0.78);
+      font-family: Arial, sans-serif;
+    }
+
+    .delivery ul {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      padding-left: 18px;
+    }
+
+    .faq-wrap {
+      max-width: 860px;
       margin: 0 auto;
     }
 
     details {
-      background: var(--ivory);
-      border: 1px solid var(--mist);
-      padding: 20px 22px;
+      background: var(--white);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      box-shadow: 0 8px 20px rgba(36, 22, 13, 0.04);
     }
 
     summary {
       cursor: pointer;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 23px;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 1.05rem;
     }
 
     details p {
-      color: var(--bark);
       margin-top: 12px;
-      font-weight: 300;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+    }
+
+    .final-cta {
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(196, 154, 69, 0.2), transparent 36%),
+        var(--deep-green);
+      color: var(--cream);
+      padding: 90px 0;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+    }
+
+    .final-cta p {
+      color: rgba(247, 241, 231, 0.78);
+      font-family: Arial, sans-serif;
+      max-width: 620px;
+      margin: 0 auto 28px;
     }
 
     footer {
-      background:
-        radial-gradient(circle at top center, rgba(200, 168, 75, 0.12), transparent 34%),
-        var(--deep);
-      color: var(--sand);
-      padding: 60px 0 96px;
+      background: #0b100a;
+      color: rgba(247, 241, 231, 0.68);
+      padding: 30px 0;
       text-align: center;
+      font: 600 0.8rem Arial, sans-serif;
     }
 
-    footer h2 {
-      color: var(--ivory);
-      margin-bottom: 16px;
+    .mobile-sticky {
+      display: none;
     }
 
-    footer p {
-      max-width: 540px;
-      margin: 0 auto 26px;
-      color: var(--sand);
-      font-weight: 300;
-    }
-
-    .footer-small {
-      margin-top: 32px;
-      font-size: 12px;
-      color: rgba(212, 196, 160, 0.65);
-      letter-spacing: 0.08em;
-    }
-
-    .sticky-whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 70;
-      background: var(--whatsapp);
-      color: #092615;
-      padding: 14px 18px;
-      border-radius: 999px;
-      font-weight: 800;
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
-      font-size: 14px;
-      transition: transform 0.2s ease;
-    }
-
-    .sticky-whatsapp:hover {
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 900px) {
-      .announcement {
-        font-size: 10px;
-        line-height: 1.5;
-      }
-
-      .nav {
-        padding: 16px 0;
-      }
-
+    @media (max-width: 980px) {
       .nav-links {
         display: none;
       }
 
-      .logo-text {
-        font-size: 18px;
-      }
-
-      .nav-cta {
-        padding: 10px 14px;
-        font-size: 11px;
-      }
-
-      .hero {
-        padding: 58px 0 52px;
-      }
-
-      .hero-grid,
-      .shop-card,
-      .ritual-split,
-      .problem-card,
-      .local-box {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-photo,
-      .ritual-photo,
-      .problem-image {
-        max-width: 100%;
-        justify-self: stretch;
-      }
-
-      .hero-photo img {
-        height: auto;
-        max-height: 480px;
-      }
-
-      .shop-image,
-      .shop-image img {
-        min-height: auto;
-      }
-
-      .shop-content,
-      .local-box,
-      .problem-card {
-        padding: 32px;
-      }
-
-      .benefit-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .feature-image-card img,
-      .ritual-photo img,
-      .problem-image img {
-        height: auto;
-        max-height: none;
-      }
-
-      section {
-        padding: 56px 0;
-      }
-
-      .image-feature {
-        padding-top: 0;
-        padding-bottom: 56px;
-      }
-
-      .sticky-whatsapp {
-        left: 16px;
-        right: 16px;
-        text-align: center;
+      .nav {
+        min-height: 68px;
       }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 900px) {
+      .hero {
+        padding: 64px 0 48px;
+      }
+
+      .hero-grid,
+      .order-card,
+      .ingredients-grid,
+      .how-grid,
+      .who-grid,
+      .testimonial-grid,
+      .delivery-card {
+        grid-template-columns: 1fr;
+      }
+
+      .product-visual {
+        min-height: 430px;
+      }
+
+      .order-image {
+        min-height: 340px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ingredient-image {
+        min-height: 420px;
+        order: -1;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .mobile-sticky {
+        display: flex;
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        z-index: 100;
+        background: var(--gold);
+        color: var(--deep-green);
+        min-height: 56px;
+        border-radius: 999px;
+        align-items: center;
+        justify-content: center;
+        font: 900 0.8rem Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      footer {
+        padding-bottom: 92px;
+      }
+    }
+
+    @media (max-width: 560px) {
       .container {
-        width: min(100% - 24px, 1120px);
+        width: min(100% - 28px, var(--max));
       }
 
-      h1 {
-        font-size: 48px;
+      .logo {
+        font-size: 0.82rem;
+        letter-spacing: 0.16em;
       }
 
-      h2 {
-        font-size: 38px;
-      }
-
-      .button-row {
-        align-items: stretch;
+      .hero-actions,
+      .order-actions {
+        flex-direction: column;
       }
 
       .btn {
         width: 100%;
       }
 
-      .product-title {
-        font-size: 36px;
+      .bottle-card {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
       }
 
-      .shop-content,
-      .local-box,
-      .benefit-card,
-      .problem-card {
-        padding: 26px;
+      .trust-row {
+        gap: 8px;
       }
 
-      summary {
-        font-size: 21px;
+      .trust-pill {
+        font-size: 0.78rem;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="announcement">
-    Suriname orders now open · Paramaribo delivery available
+  <div class="announcement" data-i18n="announcement">
+    Bestellingen in Suriname nu geopend · Beperkte eerste batch beschikbaar
   </div>
 
   <header>
     <div class="container nav">
-      <a href="#" class="logo" aria-label="Mipro Noni Atara homepage">
-        <div class="logo-mark">N</div>
-        <div class="logo-text">Noni Atara</div>
-      </a>
+      <a href="#" class="logo">Mipro Atara</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#story">Story</a>
-        <a href="#shop">Shop</a>
-        <a href="#ritual">Ritual</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#ingredients" data-i18n="nav_ingredients">Ingrediënten</a>
+          <a href="#how-to-use" data-i18n="nav_how">Gebruik</a>
+          <a href="#delivery" data-i18n="nav_delivery">Bezorging</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+          <a href="#order" class="btn btn-primary" data-i18n="nav_order">Bestel nu</a>
+        </nav>
 
-      <a href="#shop" class="nav-cta">Order Now</a>
+        <div class="language-switcher" aria-label="Language switcher">
+          <button class="lang-btn active" type="button" data-lang="nl">NL</button>
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -838,359 +820,690 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Mipro Botanicals · Suriname</div>
-
-          <h1>Every skin tells a story.</h1>
-
-          <p>
-            Mipro Noni Atara is a cold-pressed botanical face oil made for soft,
-            nourished, radiant-looking skin. A refined skincare ritual rooted in
-            tropical botanical care.
+          <div class="eyebrow" data-i18n="hero_eyebrow">Surinaamse botanische gezichtsolie</div>
+          <h1 data-i18n="hero_title">Elke huid vertelt een verhaal.</h1>
+          <p class="hero-copy" data-i18n="hero_copy">
+            Een lichte botanische gezichtsolie met noni, kokos, marula en avocado
+            om een droge, doffe of vermoeide huid te voeden — zonder zwaar of vettig aan te voelen.
           </p>
 
-          <div class="button-row">
-            <a href="#shop" class="btn btn-primary">Order Noni Atara</a>
-            <a href="#ritual" class="btn btn-ghost">How to Use</a>
+          <div class="hero-actions">
+            <a href="#order" class="btn btn-primary" data-i18n="hero_cta_primary">
+              Bestel Noni Atara Face Oil
+            </a>
+            <a href="#ingredients" class="btn btn-secondary" data-i18n="hero_cta_secondary">
+              Bekijk ingrediënten
+            </a>
+          </div>
+
+          <div class="trust-row" aria-label="Product highlights">
+            <span class="trust-pill" data-i18n="trust_1">Lichte finish</span>
+            <span class="trust-pill" data-i18n="trust_2">Botanische olieblend</span>
+            <span class="trust-pill" data-i18n="trust_3">Lokale bezorging in Suriname</span>
           </div>
         </div>
 
-        <div class="hero-photo">
-          <img
-            src="images/hero-skin-story.png"
-            alt="Mipro Noni Atara face oil with glowing skin model"
-          >
+        <div class="hero-card" aria-label="Product visual">
+          <div class="product-visual">
+            <div class="bottle-card">
+              <strong data-i18n="product_name">Noni Atara Face Oil</strong>
+              <span data-i18n="hero_card_copy">
+                De laatste stap in je skincare routine voor een zachte, gevoede glow.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="shop">
+    <section id="order">
       <div class="container">
-        <div class="section-heading center">
-          <div class="section-kicker">Shop the ritual</div>
-          <h2>Order your bottle</h2>
-          <p>
-            Start with one bottle or reserve more for your routine. Orders are
-            confirmed directly through WhatsApp.
+        <div class="section-title">
+          <div class="eyebrow" data-i18n="order_eyebrow">Bestel je flesje</div>
+          <h2 data-i18n="order_title">Voeding, geen extra actieve stap.</h2>
+          <p data-i18n="order_intro">
+            Gemaakt om hydratatie vast te houden, de huid zachter te laten aanvoelen
+            en je routine af te sluiten met een natuurlijke glow.
           </p>
         </div>
 
-        <div class="shop-card">
-          <div class="shop-image">
-            <img
-              src="images/product-bottle.png"
-              alt="Mipro Noni Atara face oil bottle"
-            >
-          </div>
+        <div class="order-card">
+          <div class="order-image" role="img" aria-label="Bottle of botanical face oil"></div>
 
-          <div class="shop-content">
-            <div class="product-title">Noni Atara Face Oil</div>
-            <div class="product-meta">30ml · Cold-pressed · Botanical care</div>
-            <div class="price">SRD 000</div>
+          <div class="order-content">
+            <div class="eyebrow">Mipro</div>
+            <h2 data-i18n="product_name">Noni Atara Face Oil</h2>
+            <div class="price">SRD [prijs toevoegen]</div>
 
-            <p class="product-description">
-              A lightweight botanical face oil designed to help skin feel soft,
-              comfortable, and naturally radiant. Use as the final step in your
-              skincare routine, morning or night.
+            <p data-i18n="order_copy">
+              Een botanische gezichtsolie voor huid die droog, dof, trekkerig of vermoeid aanvoelt.
+              Gebruik 1–2 druppels als laatste stap in je ochtend- of avondroutine.
             </p>
 
-            <div class="quantity" aria-label="Select quantity">
-              <button type="button" onclick="changeQuantity(-1)" aria-label="Decrease quantity">−</button>
-              <span id="quantity">1</span>
-              <button type="button" onclick="changeQuantity(1)" aria-label="Increase quantity">+</button>
+            <ul class="benefit-list">
+              <li data-i18n="benefit_1">Met noni-, kokos-, marula- en avocado-olie</li>
+              <li data-i18n="benefit_2">Helpt de huid zachter en gevoed te laten aanvoelen</li>
+              <li data-i18n="benefit_3">Lichte textuur zonder zwaar vettig gevoel</li>
+              <li data-i18n="benefit_4">Ideaal als laatste stap na je moisturizer</li>
+              <li data-i18n="benefit_5">Lokale bezorging beschikbaar in Suriname</li>
+            </ul>
+
+            <div class="order-actions">
+              <a href="https://wa.me/5970000000" class="btn btn-primary" data-i18n="whatsapp_cta">
+                Bestel via WhatsApp
+              </a>
+              <a href="#faq" class="btn btn-dark-outline" data-i18n="questions_cta">
+                Eerst vragen?
+              </a>
             </div>
 
-            <div class="button-row">
-              <a id="whatsappOrder" class="btn btn-primary" href="#" target="_blank" rel="noopener">
-                Order via WhatsApp
-              </a>
-
-              <a class="btn btn-outline" href="#faq">
-                View Details
-              </a>
+            <div class="microcopy" data-i18n="microcopy">
+              Patch test aanbevolen. Start met 1–2 druppels. Stuur ons gerust een bericht
+              als je twijfelt of deze olie past bij jouw huidtype.
             </div>
-
-            <p class="order-note">
-              Payment options: bank transfer, pickup payment, or delivery payment where available.
-            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="story">
+    <section class="features">
       <div class="container">
-        <div class="section-heading">
-          <div class="section-kicker">Rooted in botanical care</div>
-          <h2>Nourishment, not another active.</h2>
-          <p>
-            Noni Atara is made for people who want their skincare to feel simple,
-            elegant, and comforting. It supports a soft, healthy-looking glow without
-            overcomplicating your routine.
+        <div class="section-title">
+          <div class="eyebrow" data-i18n="features_eyebrow">Waarom het past in je routine</div>
+          <h2 data-i18n="features_title">Zachtheid, glow en comfort.</h2>
+          <p data-i18n="features_intro">
+            Een face oil hoort je huidbarrière te ondersteunen en je routine mooi af te sluiten —
+            niet je huid te overweldigen.
           </p>
         </div>
 
-        <div class="benefit-grid">
-          <div class="benefit-card">
-            <span>01</span>
-            <h3>Softens skin texture</h3>
-            <p>
-              Helps skin feel smoother and more comfortable as part of your daily routine.
+        <div class="feature-grid">
+          <article class="feature">
+            <h3 data-i18n="feature_1_title">Verzacht de huidstructuur</h3>
+            <p data-i18n="feature_1_copy">
+              Helpt een droge of ruwe huid gladder en comfortabeler te laten aanvoelen.
             </p>
-          </div>
+          </article>
 
-          <div class="benefit-card">
-            <span>02</span>
-            <h3>Seals in hydration</h3>
-            <p>
-              Use after moisturizer to help lock in the feeling of nourishment.
+          <article class="feature">
+            <h3 data-i18n="feature_2_title">Sluit hydratatie in</h3>
+            <p data-i18n="feature_2_copy">
+              Gebruik na je moisturizer om je eerdere skincare stappen te helpen verzegelen.
             </p>
-          </div>
+          </article>
 
-          <div class="benefit-card">
-            <span>03</span>
-            <h3>Day or night use</h3>
-            <p>
-              Lightweight enough for evening rituals or a soft daytime glow.
+          <article class="feature">
+            <h3 data-i18n="feature_3_title">Voor dag of nacht</h3>
+            <p data-i18n="feature_3_copy">
+              Gebruik een kleine hoeveelheid wanneer je huid extra voeding en glow nodig heeft.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="image-feature" aria-label="Product benefits image">
-      <div class="container">
-        <div class="feature-image-card">
-          <img
-            src="images/product-benefits.png"
-            alt="Mipro Noni Atara product benefits"
-          >
-        </div>
-      </div>
-    </section>
-
-    <section id="ritual" class="dark-section">
-      <div class="container ritual-split">
+    <section id="ingredients">
+      <div class="container ingredients-grid">
         <div>
-          <div class="section-kicker">How to use</div>
-          <h2>Your final skincare step.</h2>
+          <div class="eyebrow" data-i18n="ingredients_eyebrow">Botanische ingrediënten</div>
+          <div class="section-title" style="text-align:left; margin: 0 0 32px;">
+            <h2 data-i18n="ingredients_title">Gemaakt met oliën die je huid herkent.</h2>
+            <p data-i18n="ingredients_intro">
+              Een eenvoudige botanische blend voor voeding, zachtheid en een natuurlijke radiant finish.
+            </p>
+          </div>
 
-          <p class="ritual-intro">
-            Use Noni Atara after cleansing, toning, serum, and moisturizer to seal in
-            nourishment and finish your ritual with glow.
+          <div class="ingredient-list">
+            <article class="ingredient">
+              <h3 data-i18n="ingredient_1_title">Noni-olie</h3>
+              <p data-i18n="ingredient_1_copy">
+                Traditioneel gewaardeerd in tropische huidverzorging en het kenmerkende botanische ingrediënt in deze formule.
+              </p>
+            </article>
+
+            <article class="ingredient">
+              <h3 data-i18n="ingredient_2_title">Kokosolie</h3>
+              <p data-i18n="ingredient_2_copy">
+                Geeft een rijk, comfortabel gevoel en ondersteunt een zachter ogende finish.
+              </p>
+            </article>
+
+            <article class="ingredient">
+              <h3 data-i18n="ingredient_3_title">Marula-olie</h3>
+              <p data-i18n="ingredient_3_copy">
+                Bekend om een elegante, zijdezachte textuur die de blend lichter laat aanvoelen.
+              </p>
+            </article>
+
+            <article class="ingredient">
+              <h3 data-i18n="ingredient_4_title">Avocado-olie</h3>
+              <p data-i18n="ingredient_4_copy">
+                Een voedende olie die een droge huid zachter en soepeler helpt laten aanvoelen.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="ingredient-image" role="img" aria-label="Botanical skincare ingredients"></div>
+      </div>
+    </section>
+
+    <section id="how-to-use" class="how-to">
+      <div class="container how-grid">
+        <div>
+          <div class="eyebrow" data-i18n="how_eyebrow">Hoe gebruik je het?</div>
+          <h2 data-i18n="how_title">De laatste stap in je skincare routine.</h2>
+          <p data-i18n="how_intro">
+            Gebruik Noni Atara na reinigen, toner, serum en moisturizer.
+            Face oil werkt het best als afsluitende stap van je routine.
           </p>
 
-          <div class="ritual-list">
-            <div><strong>01</strong> Cleanse — fresh start</div>
-            <div><strong>02</strong> Tone — balance and prep</div>
-            <div><strong>03</strong> Serum — targeted care</div>
-            <div><strong>04</strong> Moisturize — lock in hydration</div>
-            <div><strong>05</strong> Noni Atara — seal it in</div>
-          </div>
+          <a href="#order" class="btn btn-primary" data-i18n="order_bottle_cta">
+            Bestel je flesje
+          </a>
         </div>
 
-        <div class="ritual-photo">
-          <img
-            src="images/ritual-steps.png"
-            alt="Applying Mipro Noni Atara face oil as the final skincare step"
-          >
+        <div class="steps">
+          <div class="step">
+            <div>
+              <strong data-i18n="step_1_title">Reinig</strong>
+              <span data-i18n="step_1_copy">Begin met een schone huid.</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <strong data-i18n="step_2_title">Gebruik toner of mist</strong>
+              <span data-i18n="step_2_copy">Voeg lichte hydratatie toe voordat je het afsluit.</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <strong data-i18n="step_3_title">Breng serum aan</strong>
+              <span data-i18n="step_3_copy">Gebruik eerst je treatment stap, als die in je routine zit.</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <strong data-i18n="step_4_title">Hydrateer</strong>
+              <span data-i18n="step_4_copy">Gebruik je crème of lotion vóór de face oil.</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <div>
+              <strong data-i18n="step_5_title">Sluit af met face oil</strong>
+              <span data-i18n="step_5_copy">Warm 1–2 druppels tussen je handpalmen en druk zachtjes in de huid.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="problem-section">
+    <section id="skin-fit">
       <div class="container">
-        <div class="problem-card">
-          <div>
-            <div class="section-kicker">Problem / solution</div>
-            <h2>Makeup clinging to dry patches?</h2>
+        <div class="section-title">
+          <div class="eyebrow" data-i18n="fit_eyebrow">Voor je bestelt</div>
+          <h2 data-i18n="fit_title">Past Noni Atara bij jou?</h2>
+          <p data-i18n="fit_intro">
+            De beste skincare ervaring begint met duidelijke verwachtingen.
+          </p>
+        </div>
 
-            <p>
-              Finish your skincare routine with Noni Atara to help skin feel softer,
-              smoother, and more comfortable before makeup. A small final step can make
-              your glow feel more polished.
-            </p>
+        <div class="who-grid">
+          <article class="who-card">
+            <h3 data-i18n="best_for_title">Geschikt voor</h3>
+            <ul>
+              <li data-i18n="best_for_1">Droge of dof ogende huid</li>
+              <li data-i18n="best_for_2">Huid die trekkerig aanvoelt na het reinigen</li>
+              <li data-i18n="best_for_3">Avondroutines</li>
+              <li data-i18n="best_for_4">Iedereen die een zachte, gevoede glow wil</li>
+              <li data-i18n="best_for_5">Mensen die houden van eenvoudige botanische skincare</li>
+            </ul>
+          </article>
 
-            <a href="#shop" class="btn btn-primary">Shop Now</a>
-          </div>
-
-          <div class="problem-image">
-            <img
-              src="images/age-beautifully.png"
-              alt="Mipro Noni Atara face oil for dry-looking skin"
-            >
-          </div>
+          <article class="who-card">
+            <h3 data-i18n="careful_title">Gebruik met voorzichtigheid als</h3>
+            <ul>
+              <li data-i18n="careful_1">Je huid erg vet of acnegevoelig is</li>
+              <li data-i18n="careful_2">Je gevoelig bent voor botanische oliën</li>
+              <li data-i18n="careful_3">Je sterke actieve ingrediënten of behandelingen gebruikt</li>
+              <li data-i18n="careful_4">Je nog nooit face oil hebt gebruikt</li>
+              <li data-i18n="careful_5">Je bekende ingrediëntgevoeligheden hebt</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="testimonial-section">
       <div class="container">
-        <div class="local-box">
-          <div>
-            <div class="section-kicker">Ordering in Suriname</div>
+        <div class="section-title">
+          <div class="eyebrow" data-i18n="reviews_eyebrow">Vertrouwen</div>
+          <h2 data-i18n="reviews_title">Gemaakt voor echte routines.</h2>
+          <p data-i18n="reviews_intro">
+            Voeg hier echte geverifieerde reviews toe zodra klantfeedback beschikbaar is.
+            De voorbeelden hieronder tonen het aanbevolen format.
+          </p>
+        </div>
 
-            <h2>Made easy for local customers.</h2>
-
-            <p>
-              This page is designed around a simple local order flow: choose your
-              quantity, send your WhatsApp order, confirm payment, and arrange delivery
-              or pickup.
+        <div class="testimonial-grid">
+          <article class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="review_1">
+              “Mijn huid voelt zachter zonder vettig aan te voelen. Ik gebruik het ’s avonds na mijn moisturizer.”
             </p>
-          </div>
+            <span data-i18n="verified_customer">Geverifieerde klant</span>
+          </article>
 
-          <div class="local-list">
-            <div class="local-item">
-              <div class="dot"></div>
-              <div>
-                <strong>WhatsApp confirmation</strong>
-                Send your order, quantity, name, and delivery details.
-              </div>
-            </div>
+          <article class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="review_2">
+              “Ik heb maar een paar druppels nodig. Het geeft mijn huid een gezonde glow.”
+            </p>
+            <span data-i18n="verified_customer">Geverifieerde klant</span>
+          </article>
 
-            <div class="local-item">
-              <div class="dot"></div>
-              <div>
-                <strong>Paramaribo delivery</strong>
-                Delivery can be arranged locally after confirmation.
-              </div>
-            </div>
+          <article class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="review_3">
+              “De textuur voelt rijk maar niet zwaar. Het is mijn vaste laatste stap geworden.”
+            </p>
+            <span data-i18n="verified_customer">Geverifieerde klant</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="local-item">
-              <div class="dot"></div>
-              <div>
-                <strong>Flexible payment</strong>
-                Bank transfer, pickup payment, or delivery payment depending on the order.
-              </div>
-            </div>
+    <section id="delivery" class="delivery">
+      <div class="container delivery-card">
+        <div>
+          <div class="eyebrow" data-i18n="delivery_eyebrow">Lokaal bestellen</div>
+          <h2 data-i18n="delivery_title">Makkelijk gemaakt voor klanten in Suriname.</h2>
+          <p data-i18n="delivery_intro">
+            Bestel direct via WhatsApp en ontvang duidelijke bezorg- en betaalinformatie
+            voordat je jouw bestelling bevestigt.
+          </p>
+        </div>
 
-            <div class="local-item">
-              <div class="dot"></div>
-              <div>
-                <strong>Personal support</strong>
-                Customers can ask questions before ordering.
-              </div>
-            </div>
-          </div>
+        <div>
+          <ul>
+            <li data-i18n="delivery_1">WhatsApp bestelling voor snelle vragen en bevestiging</li>
+            <li data-i18n="delivery_2">Lokale bezorgopties beschikbaar</li>
+            <li data-i18n="delivery_3">Duidelijke betaalinstructies vóór levering</li>
+            <li data-i18n="delivery_4">Simpele uitleg over hoe je de olie correct gebruikt</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="faq">
       <div class="container">
-        <div class="section-heading center">
-          <div class="section-kicker">Questions</div>
-          <h2>Before you order</h2>
+        <div class="section-title">
+          <div class="eyebrow" data-i18n="faq_eyebrow">Vragen</div>
+          <h2 data-i18n="faq_title">Voordat je bestelt</h2>
+          <p data-i18n="faq_intro">
+            Snelle antwoorden op veelgestelde vragen voordat je met je ritual begint.
+          </p>
         </div>
 
-        <div class="faq">
+        <div class="faq-wrap">
           <details open>
-            <summary>Is Noni Atara for all skin types?</summary>
-            <p>
-              It is designed as a botanical skincare oil. If your skin is sensitive,
-              patch test first before applying it to your face.
+            <summary data-i18n="faq_1_q">Is Noni Atara geschikt voor alle huidtypes?</summary>
+            <p data-i18n="faq_1_a">
+              Het past het best bij normale, droge, doffe of vermoeid ogende huid.
+              Als je huid erg vet, acnegevoelig of gevoelig is, doe dan eerst een patch test
+              en begin met een kleine hoeveelheid.
             </p>
           </details>
 
           <details>
-            <summary>How do I order?</summary>
-            <p>
-              Click “Order via WhatsApp.” Your message will open with the quantity
-              already included. Add your name, address, and preferred delivery or pickup option.
+            <summary data-i18n="faq_2_q">Hoeveel moet ik gebruiken?</summary>
+            <p data-i18n="faq_2_a">
+              Begin met 1–2 druppels. Warm de olie tussen je handpalmen en druk zachtjes
+              in de huid als laatste stap van je routine.
             </p>
           </details>
 
           <details>
-            <summary>Do you deliver outside Paramaribo?</summary>
-            <p>
-              Paramaribo delivery can be arranged first. Other districts can be discussed
-              directly through WhatsApp.
+            <summary data-i18n="faq_3_q">Gebruik ik het vóór of na moisturizer?</summary>
+            <p data-i18n="faq_3_a">
+              Gebruik het na je moisturizer. Face oil werkt het best als afsluitende stap
+              om je routine te verzegelen.
             </p>
           </details>
 
           <details>
-            <summary>How should I use it?</summary>
-            <p>
-              Apply 2–3 drops as the final step in your skincare routine. Avoid direct
-              contact with eyes. External use only.
+            <summary data-i18n="faq_4_q">Kan ik het overdag gebruiken?</summary>
+            <p data-i18n="faq_4_a">
+              Ja. Gebruik een kleine hoeveelheid overdag als je huid extra comfort of glow nodig heeft.
+              Gebruik in de ochtend altijd ook zonnebescherming.
             </p>
           </details>
 
           <details>
-            <summary>How do I pay?</summary>
-            <p>
-              Payment can be confirmed through WhatsApp. Options may include bank transfer,
-              pickup payment, or delivery payment depending on your order.
+            <summary data-i18n="faq_5_q">Hoe bestel ik?</summary>
+            <p data-i18n="faq_5_a">
+              Tik op de WhatsApp bestelknop, stuur je naam en bezorggebied,
+              en bevestig je bestelgegevens vóór betaling of levering.
             </p>
           </details>
         </div>
       </div>
     </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="eyebrow" data-i18n="final_eyebrow">Klaar om je ritual te beginnen?</div>
+        <h2 data-i18n="final_title">Geef je huid haar laatste voedende stap.</h2>
+        <p data-i18n="final_copy">
+          Bestel Noni Atara Face Oil vandaag en breng een zachte, botanische glow in je skincare routine.
+        </p>
+
+        <a href="https://wa.me/5970000000" class="btn btn-primary" data-i18n="whatsapp_cta">
+          Bestel via WhatsApp
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <h2>Ready to begin your ritual?</h2>
-
-      <p>
-        Order Mipro Noni Atara today and experience botanical skincare made simple,
-        elegant, and local.
-      </p>
-
-      <a id="footerWhatsapp" class="btn btn-primary" href="#" target="_blank" rel="noopener">
-        Order on WhatsApp
-      </a>
-
-      <div class="footer-small">
-        © 2026 Mipro Botanicals · Noni Atara · Suriname
-      </div>
-    </div>
+  <footer data-i18n="footer">
+    © 2026 Mipro Atara. Botanische skincare voor bewuste routines.
   </footer>
 
-  <a id="stickyWhatsapp" class="sticky-whatsapp" href="#" target="_blank" rel="noopener">
-    WhatsApp Order
+  <a href="#order" class="mobile-sticky" data-i18n="mobile_sticky">
+    Bestel Noni Atara Face Oil
   </a>
 
   <script>
-    let quantity = 1;
+    const translations = {
+      nl: {
+        meta_title: "Mipro Noni Atara Face Oil | Surinaamse botanische huidverzorging",
+        meta_description: "Een lichte Surinaamse botanische gezichtsolie met noni, kokos, marula en avocado voor een zachte, gevoede glow.",
 
-    /*
-      Replace this with the real Mipro WhatsApp number.
-      Format: country code + phone number.
-      No plus sign. No spaces.
+        announcement: "Bestellingen in Suriname nu geopend · Beperkte eerste batch beschikbaar",
+        nav_ingredients: "Ingrediënten",
+        nav_how: "Gebruik",
+        nav_delivery: "Bezorging",
+        nav_faq: "FAQ",
+        nav_order: "Bestel nu",
 
-      Example for Suriname:
-      const whatsappNumber = "5978123456";
-    */
-    const whatsappNumber = "5970000000";
+        hero_eyebrow: "Surinaamse botanische gezichtsolie",
+        hero_title: "Elke huid vertelt een verhaal.",
+        hero_copy: "Een lichte botanische gezichtsolie met noni, kokos, marula en avocado om een droge, doffe of vermoeide huid te voeden — zonder zwaar of vettig aan te voelen.",
+        hero_cta_primary: "Bestel Noni Atara Face Oil",
+        hero_cta_secondary: "Bekijk ingrediënten",
+        trust_1: "Lichte finish",
+        trust_2: "Botanische olieblend",
+        trust_3: "Lokale bezorging in Suriname",
+        product_name: "Noni Atara Face Oil",
+        hero_card_copy: "De laatste stap in je skincare routine voor een zachte, gevoede glow.",
 
-    function buildMessage() {
-      return `Hi Mipro, I would like to order Noni Atara.
+        order_eyebrow: "Bestel je flesje",
+        order_title: "Voeding, geen extra actieve stap.",
+        order_intro: "Gemaakt om hydratatie vast te houden, de huid zachter te laten aanvoelen en je routine af te sluiten met een natuurlijke glow.",
+        order_copy: "Een botanische gezichtsolie voor huid die droog, dof, trekkerig of vermoeid aanvoelt. Gebruik 1–2 druppels als laatste stap in je ochtend- of avondroutine.",
+        benefit_1: "Met noni-, kokos-, marula- en avocado-olie",
+        benefit_2: "Helpt de huid zachter en gevoed te laten aanvoelen",
+        benefit_3: "Lichte textuur zonder zwaar vettig gevoel",
+        benefit_4: "Ideaal als laatste stap na je moisturizer",
+        benefit_5: "Lokale bezorging beschikbaar in Suriname",
+        whatsapp_cta: "Bestel via WhatsApp",
+        questions_cta: "Eerst vragen?",
+        microcopy: "Patch test aanbevolen. Start met 1–2 druppels. Stuur ons gerust een bericht als je twijfelt of deze olie past bij jouw huidtype.",
 
-Quantity: ${quantity}
-Name:
-Delivery or pickup:
-Address:
-Payment method:
+        features_eyebrow: "Waarom het past in je routine",
+        features_title: "Zachtheid, glow en comfort.",
+        features_intro: "Een face oil hoort je huidbarrière te ondersteunen en je routine mooi af te sluiten — niet je huid te overweldigen.",
+        feature_1_title: "Verzacht de huidstructuur",
+        feature_1_copy: "Helpt een droge of ruwe huid gladder en comfortabeler te laten aanvoelen.",
+        feature_2_title: "Sluit hydratatie in",
+        feature_2_copy: "Gebruik na je moisturizer om je eerdere skincare stappen te helpen verzegelen.",
+        feature_3_title: "Voor dag of nacht",
+        feature_3_copy: "Gebruik een kleine hoeveelheid wanneer je huid extra voeding en glow nodig heeft.",
 
-Thank you.`;
+        ingredients_eyebrow: "Botanische ingrediënten",
+        ingredients_title: "Gemaakt met oliën die je huid herkent.",
+        ingredients_intro: "Een eenvoudige botanische blend voor voeding, zachtheid en een natuurlijke radiant finish.",
+        ingredient_1_title: "Noni-olie",
+        ingredient_1_copy: "Traditioneel gewaardeerd in tropische huidverzorging en het kenmerkende botanische ingrediënt in deze formule.",
+        ingredient_2_title: "Kokosolie",
+        ingredient_2_copy: "Geeft een rijk, comfortabel gevoel en ondersteunt een zachter ogende finish.",
+        ingredient_3_title: "Marula-olie",
+        ingredient_3_copy: "Bekend om een elegante, zijdezachte textuur die de blend lichter laat aanvoelen.",
+        ingredient_4_title: "Avocado-olie",
+        ingredient_4_copy: "Een voedende olie die een droge huid zachter en soepeler helpt laten aanvoelen.",
+
+        how_eyebrow: "Hoe gebruik je het?",
+        how_title: "De laatste stap in je skincare routine.",
+        how_intro: "Gebruik Noni Atara na reinigen, toner, serum en moisturizer. Face oil werkt het best als afsluitende stap van je routine.",
+        order_bottle_cta: "Bestel je flesje",
+        step_1_title: "Reinig",
+        step_1_copy: "Begin met een schone huid.",
+        step_2_title: "Gebruik toner of mist",
+        step_2_copy: "Voeg lichte hydratatie toe voordat je het afsluit.",
+        step_3_title: "Breng serum aan",
+        step_3_copy: "Gebruik eerst je treatment stap, als die in je routine zit.",
+        step_4_title: "Hydrateer",
+        step_4_copy: "Gebruik je crème of lotion vóór de face oil.",
+        step_5_title: "Sluit af met face oil",
+        step_5_copy: "Warm 1–2 druppels tussen je handpalmen en druk zachtjes in de huid.",
+
+        fit_eyebrow: "Voor je bestelt",
+        fit_title: "Past Noni Atara bij jou?",
+        fit_intro: "De beste skincare ervaring begint met duidelijke verwachtingen.",
+        best_for_title: "Geschikt voor",
+        best_for_1: "Droge of dof ogende huid",
+        best_for_2: "Huid die trekkerig aanvoelt na het reinigen",
+        best_for_3: "Avondroutines",
+        best_for_4: "Iedereen die een zachte, gevoede glow wil",
+        best_for_5: "Mensen die houden van eenvoudige botanische skincare",
+        careful_title: "Gebruik met voorzichtigheid als",
+        careful_1: "Je huid erg vet of acnegevoelig is",
+        careful_2: "Je gevoelig bent voor botanische oliën",
+        careful_3: "Je sterke actieve ingrediënten of behandelingen gebruikt",
+        careful_4: "Je nog nooit face oil hebt gebruikt",
+        careful_5: "Je bekende ingrediëntgevoeligheden hebt",
+
+        reviews_eyebrow: "Vertrouwen",
+        reviews_title: "Gemaakt voor echte routines.",
+        reviews_intro: "Voeg hier echte geverifieerde reviews toe zodra klantfeedback beschikbaar is. De voorbeelden hieronder tonen het aanbevolen format.",
+        review_1: "“Mijn huid voelt zachter zonder vettig aan te voelen. Ik gebruik het ’s avonds na mijn moisturizer.”",
+        review_2: "“Ik heb maar een paar druppels nodig. Het geeft mijn huid een gezonde glow.”",
+        review_3: "“De textuur voelt rijk maar niet zwaar. Het is mijn vaste laatste stap geworden.”",
+        verified_customer: "Geverifieerde klant",
+
+        delivery_eyebrow: "Lokaal bestellen",
+        delivery_title: "Makkelijk gemaakt voor klanten in Suriname.",
+        delivery_intro: "Bestel direct via WhatsApp en ontvang duidelijke bezorg- en betaalinformatie voordat je jouw bestelling bevestigt.",
+        delivery_1: "WhatsApp bestelling voor snelle vragen en bevestiging",
+        delivery_2: "Lokale bezorgopties beschikbaar",
+        delivery_3: "Duidelijke betaalinstructies vóór levering",
+        delivery_4: "Simpele uitleg over hoe je de olie correct gebruikt",
+
+        faq_eyebrow: "Vragen",
+        faq_title: "Voordat je bestelt",
+        faq_intro: "Snelle antwoorden op veelgestelde vragen voordat je met je ritual begint.",
+        faq_1_q: "Is Noni Atara geschikt voor alle huidtypes?",
+        faq_1_a: "Het past het best bij normale, droge, doffe of vermoeid ogende huid. Als je huid erg vet, acnegevoelig of gevoelig is, doe dan eerst een patch test en begin met een kleine hoeveelheid.",
+        faq_2_q: "Hoeveel moet ik gebruiken?",
+        faq_2_a: "Begin met 1–2 druppels. Warm de olie tussen je handpalmen en druk zachtjes in de huid als laatste stap van je routine.",
+        faq_3_q: "Gebruik ik het vóór of na moisturizer?",
+        faq_3_a: "Gebruik het na je moisturizer. Face oil werkt het best als afsluitende stap om je routine te verzegelen.",
+        faq_4_q: "Kan ik het overdag gebruiken?",
+        faq_4_a: "Ja. Gebruik een kleine hoeveelheid overdag als je huid extra comfort of glow nodig heeft. Gebruik in de ochtend altijd ook zonnebescherming.",
+        faq_5_q: "Hoe bestel ik?",
+        faq_5_a: "Tik op de WhatsApp bestelknop, stuur je naam en bezorggebied, en bevestig je bestelgegevens vóór betaling of levering.",
+
+        final_eyebrow: "Klaar om je ritual te beginnen?",
+        final_title: "Geef je huid haar laatste voedende stap.",
+        final_copy: "Bestel Noni Atara Face Oil vandaag en breng een zachte, botanische glow in je skincare routine.",
+        footer: "© 2026 Mipro Atara. Botanische skincare voor bewuste routines.",
+        mobile_sticky: "Bestel Noni Atara Face Oil"
+      },
+
+      en: {
+        meta_title: "Mipro Noni Atara Face Oil | Surinamese Botanical Skincare",
+        meta_description: "A lightweight Surinamese botanical face oil made with noni, coconut, marula, and avocado oils for a soft, nourished glow.",
+
+        announcement: "Suriname orders now open · Limited first batch available",
+        nav_ingredients: "Ingredients",
+        nav_how: "How to use",
+        nav_delivery: "Delivery",
+        nav_faq: "FAQ",
+        nav_order: "Order now",
+
+        hero_eyebrow: "Surinamese botanical face oil",
+        hero_title: "Every skin tells a story.",
+        hero_copy: "A lightweight botanical face oil made with noni, coconut, marula, and avocado oils to nourish dry, dull, or tired-looking skin — without a heavy greasy finish.",
+        hero_cta_primary: "Order Noni Atara Face Oil",
+        hero_cta_secondary: "See ingredients",
+        trust_1: "Lightweight finish",
+        trust_2: "Botanical oil blend",
+        trust_3: "Local Suriname delivery",
+        product_name: "Noni Atara Face Oil",
+        hero_card_copy: "Your final skincare step for a soft, nourished glow.",
+
+        order_eyebrow: "Order your bottle",
+        order_title: "Nourishment, not another active.",
+        order_intro: "Designed to seal in hydration, soften the feel of skin, and finish your routine with a natural-looking glow.",
+        order_copy: "A botanical face oil for skin that feels dry, dull, tight, or tired. Use 1–2 drops as the final step in your morning or evening skincare routine.",
+        benefit_1: "Made with noni, coconut, marula, and avocado oils",
+        benefit_2: "Helps skin feel softer and nourished",
+        benefit_3: "Lightweight texture without a heavy greasy feel",
+        benefit_4: "Ideal as the final step after moisturizer",
+        benefit_5: "Local delivery available in Suriname",
+        whatsapp_cta: "Order via WhatsApp",
+        questions_cta: "Questions first?",
+        microcopy: "Patch test recommended. Start with 1–2 drops. Message us if you are unsure whether this oil suits your skin type.",
+
+        features_eyebrow: "Why it fits your routine",
+        features_title: "Softness, glow, and comfort.",
+        features_intro: "A face oil should support your skin barrier and finish your routine beautifully — not overwhelm your skin.",
+        feature_1_title: "Softens skin texture",
+        feature_1_copy: "Helps dry or rough-feeling skin feel smoother and more comfortable.",
+        feature_2_title: "Seals in hydration",
+        feature_2_copy: "Use after moisturizer to help seal in your previous skincare steps.",
+        feature_3_title: "For day or night",
+        feature_3_copy: "Use a small amount whenever your skin needs extra nourishment and glow.",
+
+        ingredients_eyebrow: "Botanical ingredients",
+        ingredients_title: "Made with oils your skin can recognize.",
+        ingredients_intro: "A simple botanical blend designed for nourishment, softness, and a naturally radiant finish.",
+        ingredient_1_title: "Noni Oil",
+        ingredient_1_copy: "Traditionally valued in tropical skincare and the signature botanical ingredient in this formula.",
+        ingredient_2_title: "Coconut Oil",
+        ingredient_2_copy: "Adds a rich, comforting feel and supports a softer-looking finish.",
+        ingredient_3_title: "Marula Oil",
+        ingredient_3_copy: "Known for an elegant, silky texture that helps the blend feel lighter.",
+        ingredient_4_title: "Avocado Oil",
+        ingredient_4_copy: "A nourishing oil that helps dry skin feel softer and more supple.",
+
+        how_eyebrow: "How to use",
+        how_title: "The final step in your skincare routine.",
+        how_intro: "Use Noni Atara after cleansing, toner, serum, and moisturizer. Face oil works best as the final sealing step in your routine.",
+        order_bottle_cta: "Order your bottle",
+        step_1_title: "Cleanse",
+        step_1_copy: "Start with clean skin.",
+        step_2_title: "Use toner or mist",
+        step_2_copy: "Add light hydration before sealing it in.",
+        step_3_title: "Apply serum",
+        step_3_copy: "Use your treatment step first, if it is part of your routine.",
+        step_4_title: "Moisturize",
+        step_4_copy: "Use your cream or lotion before face oil.",
+        step_5_title: "Seal with face oil",
+        step_5_copy: "Warm 1–2 drops between your palms and gently press into the skin.",
+
+        fit_eyebrow: "Before you order",
+        fit_title: "Is Noni Atara right for you?",
+        fit_intro: "The best skincare experience starts with clear expectations.",
+        best_for_title: "Best for",
+        best_for_1: "Dry or dull-looking skin",
+        best_for_2: "Skin that feels tight after cleansing",
+        best_for_3: "Evening routines",
+        best_for_4: "Anyone who wants a soft, nourished glow",
+        best_for_5: "People who enjoy simple botanical skincare",
+        careful_title: "Use with care if",
+        careful_1: "Your skin is very oily or acne-prone",
+        careful_2: "You are sensitive to botanical oils",
+        careful_3: "You use strong active ingredients or treatments",
+        careful_4: "You have never used face oil before",
+        careful_5: "You have known ingredient sensitivities",
+
+        reviews_eyebrow: "Trust",
+        reviews_title: "Made for real routines.",
+        reviews_intro: "Add real verified reviews here once customer feedback is available. The examples below show the recommended format.",
+        review_1: "“My skin feels softer without feeling oily. I use it at night after my moisturizer.”",
+        review_2: "“I only need a few drops. It gives my skin a healthy glow.”",
+        review_3: "“The texture feels rich but not heavy. It has become my final step.”",
+        verified_customer: "Verified customer",
+
+        delivery_eyebrow: "Local ordering",
+        delivery_title: "Made easy for customers in Suriname.",
+        delivery_intro: "Order directly through WhatsApp and receive clear delivery and payment information before confirming your order.",
+        delivery_1: "WhatsApp ordering for quick questions and confirmation",
+        delivery_2: "Local delivery options available",
+        delivery_3: "Clear payment instructions before delivery",
+        delivery_4: "Simple guidance on how to use the oil correctly",
+
+        faq_eyebrow: "Questions",
+        faq_title: "Before you order",
+        faq_intro: "Quick answers to common questions before starting your ritual.",
+        faq_1_q: "Is Noni Atara suitable for all skin types?",
+        faq_1_a: "It is best suited for normal, dry, dull, or tired-looking skin. If your skin is very oily, acne-prone, or sensitive, patch test first and start with a small amount.",
+        faq_2_q: "How much should I use?",
+        faq_2_a: "Start with 1–2 drops. Warm the oil between your palms and gently press it into the skin as the final step in your routine.",
+        faq_3_q: "Do I use it before or after moisturizer?",
+        faq_3_a: "Use it after moisturizer. Face oil works best as the final sealing step in your routine.",
+        faq_4_q: "Can I use it during the day?",
+        faq_4_a: "Yes. Use a small amount during the day if your skin needs extra comfort or glow. In the morning, always finish with sunscreen.",
+        faq_5_q: "How do I order?",
+        faq_5_a: "Tap the WhatsApp order button, send your name and delivery area, and confirm your order details before payment or delivery.",
+
+        final_eyebrow: "Ready to begin your ritual?",
+        final_title: "Give your skin its final nourishing step.",
+        final_copy: "Order Noni Atara Face Oil today and bring a soft, botanical glow into your skincare routine.",
+        footer: "© 2026 Mipro Atara. Botanical skincare for intentional routines.",
+        mobile_sticky: "Order Noni Atara Face Oil"
+      }
+    };
+
+    function setLanguage(lang) {
+      const dictionary = translations[lang];
+
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (dictionary[key]) {
+          element.textContent = dictionary[key];
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-content]").forEach((element) => {
+        const key = element.getAttribute("data-i18n-content");
+        if (dictionary[key]) {
+          element.setAttribute("content", dictionary[key]);
+        }
+      });
+
+      document.title = dictionary.meta_title;
+
+      document.querySelectorAll(".lang-btn").forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === lang);
+      });
+
+      localStorage.setItem("mipro_language", lang);
     }
 
-    function updateWhatsappLinks() {
-      const message = encodeURIComponent(buildMessage());
-      const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+    document.querySelectorAll(".lang-btn").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
 
-      document.getElementById("whatsappOrder").href = url;
-      document.getElementById("footerWhatsapp").href = url;
-      document.getElementById("stickyWhatsapp").href = url;
-    }
-
-    function changeQuantity(amount) {
-      quantity = Math.max(1, quantity + amount);
-      document.getElementById("quantity").textContent = quantity;
-      updateWhatsappLinks();
-    }
-
-    updateWhatsappLinks();
+    const savedLanguage = localStorage.getItem("mipro_language") || "nl";
+    setLanguage(savedLanguage);
   </script>
 </body>
 </html>
