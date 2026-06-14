@@ -405,13 +405,14 @@
 
     .image-showcase {
       background: var(--cream);
+      padding: 70px 0;
     }
 
     .showcase-grid {
       display: grid;
-      grid-template-columns: 1fr 0.95fr;
-      gap: 56px;
-      align-items: start;
+      grid-template-columns: minmax(420px, 0.95fr) minmax(420px, 1.05fr);
+      gap: 48px;
+      align-items: center;
     }
 
     .showcase-image {
@@ -420,7 +421,6 @@
       box-shadow: var(--shadow);
       border: 1px solid rgba(36, 22, 13, 0.08);
       background: #f4eadc;
-      margin-top: 8px;
     }
 
     .showcase-image img {
@@ -431,7 +431,7 @@
     }
 
     .showcase-copy {
-      max-width: 560px;
+      max-width: 620px;
     }
 
     .showcase-copy h2 {
@@ -447,28 +447,52 @@
       margin-bottom: 24px;
     }
 
-    .ingredient-list {
+    .ingredient-checklist {
       display: grid;
       gap: 16px;
-      margin-top: 24px;
-    }
-
-    .ingredient {
-      padding: 22px;
-      background: var(--white);
-      border-radius: 18px;
-      box-shadow: 0 10px 28px rgba(36, 22, 13, 0.06);
-      border: 1px solid rgba(36, 22, 13, 0.06);
-    }
-
-    .ingredient h3 {
-      margin-bottom: 6px;
-    }
-
-    .ingredient p {
+      margin-top: 26px;
       font-family: Arial, sans-serif;
+    }
+
+    .ingredient-checklist li {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
       color: var(--muted);
-      font-size: 0.95rem;
+    }
+
+    .ingredient-checklist li::before {
+      content: "✓";
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--deep-green);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .ingredient-checklist strong {
+      display: block;
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+      margin-bottom: 3px;
+    }
+
+    .ingredient-checklist span {
+      display: block;
+      line-height: 1.55;
+    }
+
+    .showcase-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
     }
 
     .how-to {
@@ -697,6 +721,14 @@
       .feature-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase-copy {
+        max-width: none;
+      }
     }
 
     @media (max-width: 900px) {
@@ -706,7 +738,6 @@
 
       .hero-grid,
       .order-card,
-      .showcase-grid,
       .how-grid,
       .who-grid,
       .testimonial-grid,
@@ -724,14 +755,6 @@
         height: auto;
       }
 
-      .showcase-copy {
-        max-width: none;
-      }
-
-      .showcase-image {
-        margin-top: 0;
-      }
-
       .order-image,
       .order-image img {
         min-height: unset;
@@ -742,6 +765,10 @@
       }
 
       section {
+        padding: 64px 0;
+      }
+
+      .image-showcase {
         padding: 64px 0;
       }
 
@@ -784,7 +811,8 @@
       }
 
       .hero-actions,
-      .order-actions {
+      .order-actions,
+      .showcase-actions {
         flex-direction: column;
       }
 
@@ -798,6 +826,10 @@
 
       .trust-pill {
         font-size: 0.78rem;
+      }
+
+      .ingredient-checklist li {
+        grid-template-columns: 26px 1fr;
       }
     }
   </style>
@@ -997,28 +1029,42 @@
             zonder een zware, glimmende of synthetische finish.
           </p>
 
-          <div class="ingredient-list">
-            <article class="ingredient">
-              <h3 data-i18n="ingredient_1_title">Cold-pressed noni seed oil</h3>
-              <p data-i18n="ingredient_1_copy">
-                De held van de formule: een botanische olie die helpt de huid gevoed
-                en verzorgd te laten aanvoelen.
-              </p>
-            </article>
+          <ul class="ingredient-checklist">
+            <li>
+              <div>
+                <strong data-i18n="ingredient_1_title">Cold-pressed noni seed oil</strong>
+                <span data-i18n="ingredient_1_copy">
+                  De held van de formule: een botanische olie die helpt de huid gevoed en verzorgd te laten aanvoelen.
+                </span>
+              </div>
+            </li>
 
-            <article class="ingredient">
-              <h3 data-i18n="ingredient_2_title">Citrus peel extract</h3>
-              <p data-i18n="ingredient_2_copy">
-                Toegevoegd voor een frisse, natuurlijke glow en een radiant ogende huid.
-              </p>
-            </article>
+            <li>
+              <div>
+                <strong data-i18n="ingredient_2_title">Citrus peel extract</strong>
+                <span data-i18n="ingredient_2_copy">
+                  Toegevoegd voor een frisse, natuurlijke glow en een radiant ogende huid.
+                </span>
+              </div>
+            </li>
 
-            <article class="ingredient">
-              <h3 data-i18n="ingredient_3_title">Lichte textuur</h3>
-              <p data-i18n="ingredient_3_copy">
-                Snel absorberend, geschikt als laatste stap na moisturizer.
-              </p>
-            </article>
+            <li>
+              <div>
+                <strong data-i18n="ingredient_3_title">Lichte textuur</strong>
+                <span data-i18n="ingredient_3_copy">
+                  Snel absorberend, geschikt als laatste stap na moisturizer.
+                </span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="showcase-actions">
+            <a href="#order" class="btn btn-primary" data-i18n="hero_cta_primary">
+              Bestel Noni Atara
+            </a>
+            <a href="#how-to-use" class="btn btn-dark-outline" data-i18n="nav_how">
+              Gebruik
+            </a>
           </div>
         </div>
       </div>
