@@ -4,11 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title data-i18n="meta_title">Mipro Noni Atara Face Oil | Surinaamse botanische huidverzorging</title>
+  <title>Mipro Noni Atara Face Oil | Surinaamse botanische huidverzorging</title>
   <meta
     name="description"
-    content="Een lichte Surinaamse botanische gezichtsolie met noni, kokos, marula en avocado voor een zachte, gevoede glow."
-    data-i18n-content="meta_description"
+    content="Een luxe Surinaamse botanische gezichtsolie met noni, citrus peel extract en een lichte, snel absorberende textuur."
   />
 
   <style>
@@ -23,7 +22,7 @@
       --muted: #756b5f;
       --white: #ffffff;
       --shadow: 0 20px 50px rgba(29, 47, 26, 0.12);
-      --radius: 22px;
+      --radius: 24px;
       --max: 1180px;
     }
 
@@ -83,8 +82,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: var(--cream);
       gap: 20px;
+      color: var(--cream);
     }
 
     .logo {
@@ -175,7 +174,7 @@
     }
 
     .btn-secondary {
-      border-color: rgba(255, 255, 255, 0.28);
+      border-color: rgba(255, 255, 255, 0.32);
       color: var(--cream);
     }
 
@@ -199,14 +198,14 @@
         radial-gradient(circle at 80% 20%, rgba(196, 154, 69, 0.18), transparent 34%),
         linear-gradient(135deg, var(--deep-green), var(--green));
       color: var(--cream);
-      padding: 88px 0 72px;
+      padding: 84px 0 74px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 0.95fr 1.05fr;
       align-items: center;
-      gap: 58px;
+      gap: 56px;
     }
 
     .eyebrow {
@@ -218,7 +217,7 @@
     }
 
     h1 {
-      font-size: clamp(3rem, 6vw, 6.8rem);
+      font-size: clamp(3rem, 6vw, 6.6rem);
       line-height: 0.92;
       letter-spacing: -0.055em;
       max-width: 780px;
@@ -254,48 +253,19 @@
       background: rgba(255, 255, 255, 0.04);
     }
 
-    .hero-card {
-      background: rgba(247, 241, 231, 0.08);
-      border: 1px solid rgba(247, 241, 231, 0.16);
-      border-radius: 32px;
-      padding: 18px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
-    }
-
-    .product-visual {
-      min-height: 520px;
-      border-radius: 24px;
-      background:
-        linear-gradient(135deg, rgba(247, 241, 231, 0.2), rgba(196, 154, 69, 0.12)),
-        url("https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=1200&q=80");
-      background-size: cover;
-      background-position: center;
-      position: relative;
+    .hero-image {
+      border-radius: 34px;
       overflow: hidden;
+      box-shadow: 0 34px 90px rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(247, 241, 231, 0.16);
+      background: rgba(255, 255, 255, 0.06);
     }
 
-    .bottle-card {
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 24px;
-      background: rgba(247, 241, 231, 0.92);
-      color: var(--brown);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .bottle-card strong {
-      display: block;
-      font-size: 1.35rem;
-      margin-bottom: 5px;
-    }
-
-    .bottle-card span {
-      color: var(--muted);
-      font-family: Arial, sans-serif;
-      font-size: 0.95rem;
+    .hero-image img {
+      width: 100%;
+      height: min(720px, 78vh);
+      object-fit: cover;
+      object-position: center;
     }
 
     section {
@@ -304,7 +274,7 @@
 
     .section-title {
       text-align: center;
-      max-width: 740px;
+      max-width: 760px;
       margin: 0 auto 44px;
     }
 
@@ -323,8 +293,7 @@
 
     .order-card {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 0;
+      grid-template-columns: 0.95fr 1.05fr;
       background: var(--white);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -333,12 +302,16 @@
     }
 
     .order-image {
-      background:
-        linear-gradient(rgba(36, 22, 13, 0.05), rgba(36, 22, 13, 0.05)),
-        url("https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=1000&q=80");
-      background-size: cover;
-      background-position: center;
-      min-height: 460px;
+      background: var(--warm-cream);
+      min-height: 520px;
+    }
+
+    .order-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .order-content {
@@ -403,19 +376,19 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
     .feature {
-      background: rgba(255, 255, 255, 0.58);
+      background: rgba(255, 255, 255, 0.62);
       border: 1px solid rgba(36, 22, 13, 0.07);
       border-radius: 18px;
-      padding: 28px;
+      padding: 26px;
     }
 
     .feature h3 {
-      font-size: 1.35rem;
+      font-size: 1.26rem;
       margin-bottom: 8px;
     }
 
@@ -425,20 +398,50 @@
       font-size: 0.95rem;
     }
 
-    .ingredients-grid {
+    .image-showcase {
+      background: var(--cream);
+    }
+
+    .showcase-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 44px;
       align-items: center;
     }
 
+    .showcase-image {
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+    }
+
+    .showcase-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .showcase-copy h2 {
+      font-size: clamp(2.2rem, 4vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+
+    .showcase-copy p {
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
     .ingredient-list {
       display: grid;
-      gap: 18px;
+      gap: 16px;
+      margin-top: 24px;
     }
 
     .ingredient {
-      padding: 24px;
+      padding: 22px;
       background: var(--white);
       border-radius: 18px;
       box-shadow: 0 10px 28px rgba(36, 22, 13, 0.06);
@@ -447,23 +450,12 @@
 
     .ingredient h3 {
       margin-bottom: 6px;
-      color: var(--brown);
     }
 
     .ingredient p {
       font-family: Arial, sans-serif;
       color: var(--muted);
       font-size: 0.95rem;
-    }
-
-    .ingredient-image {
-      border-radius: 28px;
-      min-height: 620px;
-      background:
-        linear-gradient(rgba(29, 47, 26, 0.08), rgba(29, 47, 26, 0.08)),
-        url("https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1100&q=80");
-      background-size: cover;
-      background-position: center;
     }
 
     .how-to {
@@ -684,13 +676,13 @@
       display: none;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1040px) {
       .nav-links {
         display: none;
       }
 
-      .nav {
-        min-height: 68px;
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -701,7 +693,7 @@
 
       .hero-grid,
       .order-card,
-      .ingredients-grid,
+      .showcase-grid,
       .how-grid,
       .who-grid,
       .testimonial-grid,
@@ -709,21 +701,13 @@
         grid-template-columns: 1fr;
       }
 
-      .product-visual {
-        min-height: 430px;
+      .hero-image img {
+        height: auto;
       }
 
-      .order-image {
-        min-height: 340px;
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .ingredient-image {
-        min-height: 420px;
-        order: -1;
+      .order-image,
+      .order-image img {
+        min-height: unset;
       }
 
       section {
@@ -764,6 +748,10 @@
         letter-spacing: 0.16em;
       }
 
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero-actions,
       .order-actions {
         flex-direction: column;
@@ -771,12 +759,6 @@
 
       .btn {
         width: 100%;
-      }
-
-      .bottle-card {
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
       }
 
       .trust-row {
@@ -797,7 +779,7 @@
 
   <header>
     <div class="container nav">
-      <a href="#" class="logo">Mipro Atara</a>
+      <a href="#" class="logo">Mipro</a>
 
       <div class="nav-right">
         <nav class="nav-links" aria-label="Primary navigation">
@@ -820,38 +802,42 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow" data-i18n="hero_eyebrow">Surinaamse botanische gezichtsolie</div>
-          <h1 data-i18n="hero_title">Elke huid vertelt een verhaal.</h1>
+          <div class="eyebrow" data-i18n="hero_eyebrow">
+            Cold-pressed botanical face oil
+          </div>
+
+          <h1 data-i18n="hero_title">
+            Age beautifully.
+          </h1>
+
           <p class="hero-copy" data-i18n="hero_copy">
-            Een lichte botanische gezichtsolie met noni, kokos, marula en avocado
-            om een droge, doffe of vermoeide huid te voeden — zonder zwaar of vettig aan te voelen.
+            Luxe botanische voeding voor de gevoelige huid. Noni Atara is een lichte,
+            snel absorberende gezichtsolie met noni seed oil en citrus peel extract
+            voor een natuurlijke, gezonde glow.
           </p>
 
           <div class="hero-actions">
             <a href="#order" class="btn btn-primary" data-i18n="hero_cta_primary">
-              Bestel Noni Atara Face Oil
+              Bestel Noni Atara
             </a>
             <a href="#ingredients" class="btn btn-secondary" data-i18n="hero_cta_secondary">
-              Bekijk ingrediënten
+              Bekijk voordelen
             </a>
           </div>
 
           <div class="trust-row" aria-label="Product highlights">
-            <span class="trust-pill" data-i18n="trust_1">Lichte finish</span>
-            <span class="trust-pill" data-i18n="trust_2">Botanische olieblend</span>
+            <span class="trust-pill" data-i18n="trust_1">Licht & snel absorberend</span>
+            <span class="trust-pill" data-i18n="trust_2">Geen synthetische geur</span>
             <span class="trust-pill" data-i18n="trust_3">Lokale bezorging in Suriname</span>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="Product visual">
-          <div class="product-visual">
-            <div class="bottle-card">
-              <strong data-i18n="product_name">Noni Atara Face Oil</strong>
-              <span data-i18n="hero_card_copy">
-                De laatste stap in je skincare routine voor een zachte, gevoede glow.
-              </span>
-            </div>
-          </div>
+        <div class="hero-image">
+          <img
+            src="assets/mipro-age-beautifully.png"
+            alt="Mipro Noni Atara Face Oil met botanische ingrediënten en de tekst Age Beautifully"
+            loading="eager"
+          />
         </div>
       </div>
     </section>
@@ -860,15 +846,21 @@
       <div class="container">
         <div class="section-title">
           <div class="eyebrow" data-i18n="order_eyebrow">Bestel je flesje</div>
-          <h2 data-i18n="order_title">Voeding, geen extra actieve stap.</h2>
+          <h2 data-i18n="order_title">Voeding, glow en comfort in één laatste stap.</h2>
           <p data-i18n="order_intro">
-            Gemaakt om hydratatie vast te houden, de huid zachter te laten aanvoelen
-            en je routine af te sluiten met een natuurlijke glow.
+            Gemaakt om je huid zacht te laten aanvoelen, een natuurlijke glow te geven
+            en je skincare routine mooi af te sluiten.
           </p>
         </div>
 
         <div class="order-card">
-          <div class="order-image" role="img" aria-label="Bottle of botanical face oil"></div>
+          <div class="order-image">
+            <img
+              src="assets/mipro-flatlay.png"
+              alt="Mipro Noni Atara Face Oil met noni, citrus peel en botanische bladeren"
+              loading="lazy"
+            />
+          </div>
 
           <div class="order-content">
             <div class="eyebrow">Mipro</div>
@@ -876,15 +868,16 @@
             <div class="price">SRD [prijs toevoegen]</div>
 
             <p data-i18n="order_copy">
-              Een botanische gezichtsolie voor huid die droog, dof, trekkerig of vermoeid aanvoelt.
-              Gebruik 1–2 druppels als laatste stap in je ochtend- of avondroutine.
+              Een cold-pressed botanische gezichtsolie voor huid die droog, gevoelig,
+              dof of vermoeid aanvoelt. Gebruik 1–2 druppels als laatste stap in je
+              ochtend- of avondroutine.
             </p>
 
             <ul class="benefit-list">
-              <li data-i18n="benefit_1">Met noni-, kokos-, marula- en avocado-olie</li>
-              <li data-i18n="benefit_2">Helpt de huid zachter en gevoed te laten aanvoelen</li>
-              <li data-i18n="benefit_3">Lichte textuur zonder zwaar vettig gevoel</li>
-              <li data-i18n="benefit_4">Ideaal als laatste stap na je moisturizer</li>
+              <li data-i18n="benefit_1">Cold-pressed noni seed oil, rijk aan antioxidanten</li>
+              <li data-i18n="benefit_2">Citrus peel extract voor een natuurlijke radiant glow</li>
+              <li data-i18n="benefit_3">Lichte, snel absorberende textuur</li>
+              <li data-i18n="benefit_4">Geen fillers en geen synthetische fragrance</li>
               <li data-i18n="benefit_5">Lokale bezorging beschikbaar in Suriname</li>
             </ul>
 
@@ -909,82 +902,88 @@
     <section class="features">
       <div class="container">
         <div class="section-title">
-          <div class="eyebrow" data-i18n="features_eyebrow">Waarom het past in je routine</div>
-          <h2 data-i18n="features_title">Zachtheid, glow en comfort.</h2>
+          <div class="eyebrow" data-i18n="features_eyebrow">Waarom je huid dit voelt</div>
+          <h2 data-i18n="features_title">Luxe botanische verzorging zonder zwaarte.</h2>
           <p data-i18n="features_intro">
-            Een face oil hoort je huidbarrière te ondersteunen en je routine mooi af te sluiten —
-            niet je huid te overweldigen.
+            Een face oil hoort je huid te voeden, je routine af te sluiten en comfortabel
+            aan te voelen — niet vettig of overweldigend.
           </p>
         </div>
 
         <div class="feature-grid">
           <article class="feature">
-            <h3 data-i18n="feature_1_title">Verzacht de huidstructuur</h3>
+            <h3 data-i18n="feature_1_title">Antioxidant support</h3>
             <p data-i18n="feature_1_copy">
-              Helpt een droge of ruwe huid gladder en comfortabeler te laten aanvoelen.
+              Noni seed oil ondersteunt een gevoede, verzorgde huiduitstraling.
             </p>
           </article>
 
           <article class="feature">
-            <h3 data-i18n="feature_2_title">Sluit hydratatie in</h3>
+            <h3 data-i18n="feature_2_title">Natural radiance</h3>
             <p data-i18n="feature_2_copy">
-              Gebruik na je moisturizer om je eerdere skincare stappen te helpen verzegelen.
+              Citrus peel extract helpt de huid frisser en stralender te laten ogen.
             </p>
           </article>
 
           <article class="feature">
-            <h3 data-i18n="feature_3_title">Voor dag of nacht</h3>
+            <h3 data-i18n="feature_3_title">Fast-absorbing</h3>
             <p data-i18n="feature_3_copy">
-              Gebruik een kleine hoeveelheid wanneer je huid extra voeding en glow nodig heeft.
+              De lichte textuur trekt snel in en laat geen zwaar, vet gevoel achter.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3 data-i18n="feature_4_title">Clean finish</h3>
+            <p data-i18n="feature_4_copy">
+              Geen fillers en geen synthetische geurstoffen in de positionering.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="ingredients">
-      <div class="container ingredients-grid">
-        <div>
-          <div class="eyebrow" data-i18n="ingredients_eyebrow">Botanische ingrediënten</div>
-          <div class="section-title" style="text-align:left; margin: 0 0 32px;">
-            <h2 data-i18n="ingredients_title">Gemaakt met oliën die je huid herkent.</h2>
-            <p data-i18n="ingredients_intro">
-              Een eenvoudige botanische blend voor voeding, zachtheid en een natuurlijke radiant finish.
-            </p>
-          </div>
+    <section id="ingredients" class="image-showcase">
+      <div class="container showcase-grid">
+        <div class="showcase-image">
+          <img
+            src="assets/mipro-callouts.png"
+            alt="Mipro Noni Atara Face Oil met callouts: noni seed oil, citrus peel extract, licht en snel absorberend, geen fillers"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="showcase-copy">
+          <div class="eyebrow" data-i18n="ingredients_eyebrow">Ingrediënten & voordelen</div>
+          <h2 data-i18n="ingredients_title">Botanische verzorging met een luxe huidgevoel.</h2>
+          <p data-i18n="ingredients_intro">
+            Noni Atara is ontworpen voor mensen die een voedende gezichtsolie willen
+            zonder een zware, glimmende of synthetische finish.
+          </p>
 
           <div class="ingredient-list">
             <article class="ingredient">
-              <h3 data-i18n="ingredient_1_title">Noni-olie</h3>
+              <h3 data-i18n="ingredient_1_title">Cold-pressed noni seed oil</h3>
               <p data-i18n="ingredient_1_copy">
-                Traditioneel gewaardeerd in tropische huidverzorging en het kenmerkende botanische ingrediënt in deze formule.
+                De held van de formule: een botanische olie die helpt de huid gevoed
+                en verzorgd te laten aanvoelen.
               </p>
             </article>
 
             <article class="ingredient">
-              <h3 data-i18n="ingredient_2_title">Kokosolie</h3>
+              <h3 data-i18n="ingredient_2_title">Citrus peel extract</h3>
               <p data-i18n="ingredient_2_copy">
-                Geeft een rijk, comfortabel gevoel en ondersteunt een zachter ogende finish.
+                Toegevoegd voor een frisse, natuurlijke glow en een radiant ogende huid.
               </p>
             </article>
 
             <article class="ingredient">
-              <h3 data-i18n="ingredient_3_title">Marula-olie</h3>
+              <h3 data-i18n="ingredient_3_title">Lichte textuur</h3>
               <p data-i18n="ingredient_3_copy">
-                Bekend om een elegante, zijdezachte textuur die de blend lichter laat aanvoelen.
-              </p>
-            </article>
-
-            <article class="ingredient">
-              <h3 data-i18n="ingredient_4_title">Avocado-olie</h3>
-              <p data-i18n="ingredient_4_copy">
-                Een voedende olie die een droge huid zachter en soepeler helpt laten aanvoelen.
+                Snel absorberend, geschikt als laatste stap na moisturizer.
               </p>
             </article>
           </div>
         </div>
-
-        <div class="ingredient-image" role="img" aria-label="Botanical skincare ingredients"></div>
       </div>
     </section>
 
@@ -994,8 +993,8 @@
           <div class="eyebrow" data-i18n="how_eyebrow">Hoe gebruik je het?</div>
           <h2 data-i18n="how_title">De laatste stap in je skincare routine.</h2>
           <p data-i18n="how_intro">
-            Gebruik Noni Atara na reinigen, toner, serum en moisturizer.
-            Face oil werkt het best als afsluitende stap van je routine.
+            Gebruik Noni Atara na reinigen, toner, serum en moisturizer. Face oil werkt
+            het best als afsluitende stap van je routine.
           </p>
 
           <a href="#order" class="btn btn-primary" data-i18n="order_bottle_cta">
@@ -1013,29 +1012,29 @@
 
           <div class="step">
             <div>
-              <strong data-i18n="step_2_title">Gebruik toner of mist</strong>
-              <span data-i18n="step_2_copy">Voeg lichte hydratatie toe voordat je het afsluit.</span>
+              <strong data-i18n="step_2_title">Hydrateer</strong>
+              <span data-i18n="step_2_copy">Gebruik toner, mist, serum of moisturizer zoals normaal.</span>
             </div>
           </div>
 
           <div class="step">
             <div>
-              <strong data-i18n="step_3_title">Breng serum aan</strong>
-              <span data-i18n="step_3_copy">Gebruik eerst je treatment stap, als die in je routine zit.</span>
+              <strong data-i18n="step_3_title">Breng 1–2 druppels aan</strong>
+              <span data-i18n="step_3_copy">Warm de olie tussen je handpalmen.</span>
             </div>
           </div>
 
           <div class="step">
             <div>
-              <strong data-i18n="step_4_title">Hydrateer</strong>
-              <span data-i18n="step_4_copy">Gebruik je crème of lotion vóór de face oil.</span>
+              <strong data-i18n="step_4_title">Druk zachtjes in</strong>
+              <span data-i18n="step_4_copy">Niet hard wrijven; druk de olie zachtjes in de huid.</span>
             </div>
           </div>
 
           <div class="step">
             <div>
-              <strong data-i18n="step_5_title">Sluit af met face oil</strong>
-              <span data-i18n="step_5_copy">Warm 1–2 druppels tussen je handpalmen en druk zachtjes in de huid.</span>
+              <strong data-i18n="step_5_title">Gebruik dag of nacht</strong>
+              <span data-i18n="step_5_copy">Overdag altijd combineren met SPF als laatste bescherming.</span>
             </div>
           </div>
         </div>
@@ -1048,7 +1047,7 @@
           <div class="eyebrow" data-i18n="fit_eyebrow">Voor je bestelt</div>
           <h2 data-i18n="fit_title">Past Noni Atara bij jou?</h2>
           <p data-i18n="fit_intro">
-            De beste skincare ervaring begint met duidelijke verwachtingen.
+            Duidelijke verwachtingen zorgen voor meer vertrouwen en een betere skincare ervaring.
           </p>
         </div>
 
@@ -1057,10 +1056,10 @@
             <h3 data-i18n="best_for_title">Geschikt voor</h3>
             <ul>
               <li data-i18n="best_for_1">Droge of dof ogende huid</li>
-              <li data-i18n="best_for_2">Huid die trekkerig aanvoelt na het reinigen</li>
-              <li data-i18n="best_for_3">Avondroutines</li>
+              <li data-i18n="best_for_2">Gevoelige huid die comfort nodig heeft</li>
+              <li data-i18n="best_for_3">Mature skin en age-beautifully routines</li>
               <li data-i18n="best_for_4">Iedereen die een zachte, gevoede glow wil</li>
-              <li data-i18n="best_for_5">Mensen die houden van eenvoudige botanische skincare</li>
+              <li data-i18n="best_for_5">Mensen die houden van luxe botanische skincare</li>
             </ul>
           </article>
 
@@ -1085,7 +1084,6 @@
           <h2 data-i18n="reviews_title">Gemaakt voor echte routines.</h2>
           <p data-i18n="reviews_intro">
             Voeg hier echte geverifieerde reviews toe zodra klantfeedback beschikbaar is.
-            De voorbeelden hieronder tonen het aanbevolen format.
           </p>
         </div>
 
@@ -1153,9 +1151,8 @@
           <details open>
             <summary data-i18n="faq_1_q">Is Noni Atara geschikt voor alle huidtypes?</summary>
             <p data-i18n="faq_1_a">
-              Het past het best bij normale, droge, doffe of vermoeid ogende huid.
-              Als je huid erg vet, acnegevoelig of gevoelig is, doe dan eerst een patch test
-              en begin met een kleine hoeveelheid.
+              Het past het best bij normale, droge, doffe, gevoelige of vermoeid ogende huid.
+              Als je huid erg vet, acnegevoelig of gevoelig is, doe dan eerst een patch test.
             </p>
           </details>
 
@@ -1170,8 +1167,7 @@
           <details>
             <summary data-i18n="faq_3_q">Gebruik ik het vóór of na moisturizer?</summary>
             <p data-i18n="faq_3_a">
-              Gebruik het na je moisturizer. Face oil werkt het best als afsluitende stap
-              om je routine te verzegelen.
+              Gebruik het na je moisturizer. Face oil werkt het best als afsluitende stap.
             </p>
           </details>
 
@@ -1210,19 +1206,16 @@
   </main>
 
   <footer data-i18n="footer">
-    © 2026 Mipro Atara. Botanische skincare voor bewuste routines.
+    © 2026 Mipro. Botanische skincare voor bewuste routines.
   </footer>
 
   <a href="#order" class="mobile-sticky" data-i18n="mobile_sticky">
-    Bestel Noni Atara Face Oil
+    Bestel Noni Atara
   </a>
 
   <script>
     const translations = {
       nl: {
-        meta_title: "Mipro Noni Atara Face Oil | Surinaamse botanische huidverzorging",
-        meta_description: "Een lichte Surinaamse botanische gezichtsolie met noni, kokos, marula en avocado voor een zachte, gevoede glow.",
-
         announcement: "Bestellingen in Suriname nu geopend · Beperkte eerste batch beschikbaar",
         nav_ingredients: "Ingrediënten",
         nav_how: "Gebruik",
@@ -1230,51 +1223,51 @@
         nav_faq: "FAQ",
         nav_order: "Bestel nu",
 
-        hero_eyebrow: "Surinaamse botanische gezichtsolie",
-        hero_title: "Elke huid vertelt een verhaal.",
-        hero_copy: "Een lichte botanische gezichtsolie met noni, kokos, marula en avocado om een droge, doffe of vermoeide huid te voeden — zonder zwaar of vettig aan te voelen.",
-        hero_cta_primary: "Bestel Noni Atara Face Oil",
-        hero_cta_secondary: "Bekijk ingrediënten",
-        trust_1: "Lichte finish",
-        trust_2: "Botanische olieblend",
+        hero_eyebrow: "Cold-pressed botanische gezichtsolie",
+        hero_title: "Age beautifully.",
+        hero_copy: "Luxe botanische voeding voor de gevoelige huid. Noni Atara is een lichte, snel absorberende gezichtsolie met noni seed oil en citrus peel extract voor een natuurlijke, gezonde glow.",
+        hero_cta_primary: "Bestel Noni Atara",
+        hero_cta_secondary: "Bekijk voordelen",
+        trust_1: "Licht & snel absorberend",
+        trust_2: "Geen synthetische geur",
         trust_3: "Lokale bezorging in Suriname",
+
         product_name: "Noni Atara Face Oil",
-        hero_card_copy: "De laatste stap in je skincare routine voor een zachte, gevoede glow.",
 
         order_eyebrow: "Bestel je flesje",
-        order_title: "Voeding, geen extra actieve stap.",
-        order_intro: "Gemaakt om hydratatie vast te houden, de huid zachter te laten aanvoelen en je routine af te sluiten met een natuurlijke glow.",
-        order_copy: "Een botanische gezichtsolie voor huid die droog, dof, trekkerig of vermoeid aanvoelt. Gebruik 1–2 druppels als laatste stap in je ochtend- of avondroutine.",
-        benefit_1: "Met noni-, kokos-, marula- en avocado-olie",
-        benefit_2: "Helpt de huid zachter en gevoed te laten aanvoelen",
-        benefit_3: "Lichte textuur zonder zwaar vettig gevoel",
-        benefit_4: "Ideaal als laatste stap na je moisturizer",
+        order_title: "Voeding, glow en comfort in één laatste stap.",
+        order_intro: "Gemaakt om je huid zacht te laten aanvoelen, een natuurlijke glow te geven en je skincare routine mooi af te sluiten.",
+        order_copy: "Een cold-pressed botanische gezichtsolie voor huid die droog, gevoelig, dof of vermoeid aanvoelt. Gebruik 1–2 druppels als laatste stap in je ochtend- of avondroutine.",
+        benefit_1: "Cold-pressed noni seed oil, rijk aan antioxidanten",
+        benefit_2: "Citrus peel extract voor een natuurlijke radiant glow",
+        benefit_3: "Lichte, snel absorberende textuur",
+        benefit_4: "Geen fillers en geen synthetische fragrance",
         benefit_5: "Lokale bezorging beschikbaar in Suriname",
         whatsapp_cta: "Bestel via WhatsApp",
         questions_cta: "Eerst vragen?",
         microcopy: "Patch test aanbevolen. Start met 1–2 druppels. Stuur ons gerust een bericht als je twijfelt of deze olie past bij jouw huidtype.",
 
-        features_eyebrow: "Waarom het past in je routine",
-        features_title: "Zachtheid, glow en comfort.",
-        features_intro: "Een face oil hoort je huidbarrière te ondersteunen en je routine mooi af te sluiten — niet je huid te overweldigen.",
-        feature_1_title: "Verzacht de huidstructuur",
-        feature_1_copy: "Helpt een droge of ruwe huid gladder en comfortabeler te laten aanvoelen.",
-        feature_2_title: "Sluit hydratatie in",
-        feature_2_copy: "Gebruik na je moisturizer om je eerdere skincare stappen te helpen verzegelen.",
-        feature_3_title: "Voor dag of nacht",
-        feature_3_copy: "Gebruik een kleine hoeveelheid wanneer je huid extra voeding en glow nodig heeft.",
+        features_eyebrow: "Waarom je huid dit voelt",
+        features_title: "Luxe botanische verzorging zonder zwaarte.",
+        features_intro: "Een face oil hoort je huid te voeden, je routine af te sluiten en comfortabel aan te voelen — niet vettig of overweldigend.",
+        feature_1_title: "Antioxidant support",
+        feature_1_copy: "Noni seed oil ondersteunt een gevoede, verzorgde huiduitstraling.",
+        feature_2_title: "Natural radiance",
+        feature_2_copy: "Citrus peel extract helpt de huid frisser en stralender te laten ogen.",
+        feature_3_title: "Fast-absorbing",
+        feature_3_copy: "De lichte textuur trekt snel in en laat geen zwaar, vet gevoel achter.",
+        feature_4_title: "Clean finish",
+        feature_4_copy: "Geen fillers en geen synthetische geurstoffen in de positionering.",
 
-        ingredients_eyebrow: "Botanische ingrediënten",
-        ingredients_title: "Gemaakt met oliën die je huid herkent.",
-        ingredients_intro: "Een eenvoudige botanische blend voor voeding, zachtheid en een natuurlijke radiant finish.",
-        ingredient_1_title: "Noni-olie",
-        ingredient_1_copy: "Traditioneel gewaardeerd in tropische huidverzorging en het kenmerkende botanische ingrediënt in deze formule.",
-        ingredient_2_title: "Kokosolie",
-        ingredient_2_copy: "Geeft een rijk, comfortabel gevoel en ondersteunt een zachter ogende finish.",
-        ingredient_3_title: "Marula-olie",
-        ingredient_3_copy: "Bekend om een elegante, zijdezachte textuur die de blend lichter laat aanvoelen.",
-        ingredient_4_title: "Avocado-olie",
-        ingredient_4_copy: "Een voedende olie die een droge huid zachter en soepeler helpt laten aanvoelen.",
+        ingredients_eyebrow: "Ingrediënten & voordelen",
+        ingredients_title: "Botanische verzorging met een luxe huidgevoel.",
+        ingredients_intro: "Noni Atara is ontworpen voor mensen die een voedende gezichtsolie willen zonder een zware, glimmende of synthetische finish.",
+        ingredient_1_title: "Cold-pressed noni seed oil",
+        ingredient_1_copy: "De held van de formule: een botanische olie die helpt de huid gevoed en verzorgd te laten aanvoelen.",
+        ingredient_2_title: "Citrus peel extract",
+        ingredient_2_copy: "Toegevoegd voor een frisse, natuurlijke glow en een radiant ogende huid.",
+        ingredient_3_title: "Lichte textuur",
+        ingredient_3_copy: "Snel absorberend, geschikt als laatste stap na moisturizer.",
 
         how_eyebrow: "Hoe gebruik je het?",
         how_title: "De laatste stap in je skincare routine.",
@@ -1282,24 +1275,24 @@
         order_bottle_cta: "Bestel je flesje",
         step_1_title: "Reinig",
         step_1_copy: "Begin met een schone huid.",
-        step_2_title: "Gebruik toner of mist",
-        step_2_copy: "Voeg lichte hydratatie toe voordat je het afsluit.",
-        step_3_title: "Breng serum aan",
-        step_3_copy: "Gebruik eerst je treatment stap, als die in je routine zit.",
-        step_4_title: "Hydrateer",
-        step_4_copy: "Gebruik je crème of lotion vóór de face oil.",
-        step_5_title: "Sluit af met face oil",
-        step_5_copy: "Warm 1–2 druppels tussen je handpalmen en druk zachtjes in de huid.",
+        step_2_title: "Hydrateer",
+        step_2_copy: "Gebruik toner, mist, serum of moisturizer zoals normaal.",
+        step_3_title: "Breng 1–2 druppels aan",
+        step_3_copy: "Warm de olie tussen je handpalmen.",
+        step_4_title: "Druk zachtjes in",
+        step_4_copy: "Niet hard wrijven; druk de olie zachtjes in de huid.",
+        step_5_title: "Gebruik dag of nacht",
+        step_5_copy: "Overdag altijd combineren met SPF als laatste bescherming.",
 
         fit_eyebrow: "Voor je bestelt",
         fit_title: "Past Noni Atara bij jou?",
-        fit_intro: "De beste skincare ervaring begint met duidelijke verwachtingen.",
+        fit_intro: "Duidelijke verwachtingen zorgen voor meer vertrouwen en een betere skincare ervaring.",
         best_for_title: "Geschikt voor",
         best_for_1: "Droge of dof ogende huid",
-        best_for_2: "Huid die trekkerig aanvoelt na het reinigen",
-        best_for_3: "Avondroutines",
+        best_for_2: "Gevoelige huid die comfort nodig heeft",
+        best_for_3: "Mature skin en age-beautifully routines",
         best_for_4: "Iedereen die een zachte, gevoede glow wil",
-        best_for_5: "Mensen die houden van eenvoudige botanische skincare",
+        best_for_5: "Mensen die houden van luxe botanische skincare",
         careful_title: "Gebruik met voorzichtigheid als",
         careful_1: "Je huid erg vet of acnegevoelig is",
         careful_2: "Je gevoelig bent voor botanische oliën",
@@ -1309,7 +1302,7 @@
 
         reviews_eyebrow: "Vertrouwen",
         reviews_title: "Gemaakt voor echte routines.",
-        reviews_intro: "Voeg hier echte geverifieerde reviews toe zodra klantfeedback beschikbaar is. De voorbeelden hieronder tonen het aanbevolen format.",
+        reviews_intro: "Voeg hier echte geverifieerde reviews toe zodra klantfeedback beschikbaar is.",
         review_1: "“Mijn huid voelt zachter zonder vettig aan te voelen. Ik gebruik het ’s avonds na mijn moisturizer.”",
         review_2: "“Ik heb maar een paar druppels nodig. Het geeft mijn huid een gezonde glow.”",
         review_3: "“De textuur voelt rijk maar niet zwaar. Het is mijn vaste laatste stap geworden.”",
@@ -1327,11 +1320,11 @@
         faq_title: "Voordat je bestelt",
         faq_intro: "Snelle antwoorden op veelgestelde vragen voordat je met je ritual begint.",
         faq_1_q: "Is Noni Atara geschikt voor alle huidtypes?",
-        faq_1_a: "Het past het best bij normale, droge, doffe of vermoeid ogende huid. Als je huid erg vet, acnegevoelig of gevoelig is, doe dan eerst een patch test en begin met een kleine hoeveelheid.",
+        faq_1_a: "Het past het best bij normale, droge, doffe, gevoelige of vermoeid ogende huid. Als je huid erg vet, acnegevoelig of gevoelig is, doe dan eerst een patch test.",
         faq_2_q: "Hoeveel moet ik gebruiken?",
         faq_2_a: "Begin met 1–2 druppels. Warm de olie tussen je handpalmen en druk zachtjes in de huid als laatste stap van je routine.",
         faq_3_q: "Gebruik ik het vóór of na moisturizer?",
-        faq_3_a: "Gebruik het na je moisturizer. Face oil werkt het best als afsluitende stap om je routine te verzegelen.",
+        faq_3_a: "Gebruik het na je moisturizer. Face oil werkt het best als afsluitende stap.",
         faq_4_q: "Kan ik het overdag gebruiken?",
         faq_4_a: "Ja. Gebruik een kleine hoeveelheid overdag als je huid extra comfort of glow nodig heeft. Gebruik in de ochtend altijd ook zonnebescherming.",
         faq_5_q: "Hoe bestel ik?",
@@ -1340,14 +1333,11 @@
         final_eyebrow: "Klaar om je ritual te beginnen?",
         final_title: "Geef je huid haar laatste voedende stap.",
         final_copy: "Bestel Noni Atara Face Oil vandaag en breng een zachte, botanische glow in je skincare routine.",
-        footer: "© 2026 Mipro Atara. Botanische skincare voor bewuste routines.",
-        mobile_sticky: "Bestel Noni Atara Face Oil"
+        footer: "© 2026 Mipro. Botanische skincare voor bewuste routines.",
+        mobile_sticky: "Bestel Noni Atara"
       },
 
       en: {
-        meta_title: "Mipro Noni Atara Face Oil | Surinamese Botanical Skincare",
-        meta_description: "A lightweight Surinamese botanical face oil made with noni, coconut, marula, and avocado oils for a soft, nourished glow.",
-
         announcement: "Suriname orders now open · Limited first batch available",
         nav_ingredients: "Ingredients",
         nav_how: "How to use",
@@ -1355,51 +1345,51 @@
         nav_faq: "FAQ",
         nav_order: "Order now",
 
-        hero_eyebrow: "Surinamese botanical face oil",
-        hero_title: "Every skin tells a story.",
-        hero_copy: "A lightweight botanical face oil made with noni, coconut, marula, and avocado oils to nourish dry, dull, or tired-looking skin — without a heavy greasy finish.",
-        hero_cta_primary: "Order Noni Atara Face Oil",
-        hero_cta_secondary: "See ingredients",
-        trust_1: "Lightweight finish",
-        trust_2: "Botanical oil blend",
+        hero_eyebrow: "Cold-pressed botanical face oil",
+        hero_title: "Age beautifully.",
+        hero_copy: "Luxury botanical nourishment for sensitive skin. Noni Atara is a lightweight, fast-absorbing face oil with noni seed oil and citrus peel extract for a natural, healthy glow.",
+        hero_cta_primary: "Order Noni Atara",
+        hero_cta_secondary: "See benefits",
+        trust_1: "Lightweight & fast-absorbing",
+        trust_2: "No synthetic fragrance",
         trust_3: "Local Suriname delivery",
+
         product_name: "Noni Atara Face Oil",
-        hero_card_copy: "Your final skincare step for a soft, nourished glow.",
 
         order_eyebrow: "Order your bottle",
-        order_title: "Nourishment, not another active.",
-        order_intro: "Designed to seal in hydration, soften the feel of skin, and finish your routine with a natural-looking glow.",
-        order_copy: "A botanical face oil for skin that feels dry, dull, tight, or tired. Use 1–2 drops as the final step in your morning or evening skincare routine.",
-        benefit_1: "Made with noni, coconut, marula, and avocado oils",
-        benefit_2: "Helps skin feel softer and nourished",
-        benefit_3: "Lightweight texture without a heavy greasy feel",
-        benefit_4: "Ideal as the final step after moisturizer",
+        order_title: "Nourishment, glow, and comfort in one final step.",
+        order_intro: "Made to help skin feel softer, reveal a natural glow, and beautifully finish your skincare routine.",
+        order_copy: "A cold-pressed botanical face oil for skin that feels dry, sensitive, dull, or tired. Use 1–2 drops as the final step in your morning or evening routine.",
+        benefit_1: "Cold-pressed noni seed oil, rich in antioxidants",
+        benefit_2: "Citrus peel extract for natural radiance",
+        benefit_3: "Lightweight, fast-absorbing texture",
+        benefit_4: "No fillers and no synthetic fragrance",
         benefit_5: "Local delivery available in Suriname",
         whatsapp_cta: "Order via WhatsApp",
         questions_cta: "Questions first?",
         microcopy: "Patch test recommended. Start with 1–2 drops. Message us if you are unsure whether this oil suits your skin type.",
 
-        features_eyebrow: "Why it fits your routine",
-        features_title: "Softness, glow, and comfort.",
-        features_intro: "A face oil should support your skin barrier and finish your routine beautifully — not overwhelm your skin.",
-        feature_1_title: "Softens skin texture",
-        feature_1_copy: "Helps dry or rough-feeling skin feel smoother and more comfortable.",
-        feature_2_title: "Seals in hydration",
-        feature_2_copy: "Use after moisturizer to help seal in your previous skincare steps.",
-        feature_3_title: "For day or night",
-        feature_3_copy: "Use a small amount whenever your skin needs extra nourishment and glow.",
+        features_eyebrow: "Why your skin feels it",
+        features_title: "Luxury botanical care without heaviness.",
+        features_intro: "A face oil should nourish your skin, finish your routine, and feel comfortable — not greasy or overwhelming.",
+        feature_1_title: "Antioxidant support",
+        feature_1_copy: "Noni seed oil supports a nourished, cared-for skin appearance.",
+        feature_2_title: "Natural radiance",
+        feature_2_copy: "Citrus peel extract helps skin look fresher and more radiant.",
+        feature_3_title: "Fast-absorbing",
+        feature_3_copy: "The lightweight texture absorbs quickly without leaving a heavy, greasy feel.",
+        feature_4_title: "Clean finish",
+        feature_4_copy: "Positioned with no fillers and no synthetic fragrance.",
 
-        ingredients_eyebrow: "Botanical ingredients",
-        ingredients_title: "Made with oils your skin can recognize.",
-        ingredients_intro: "A simple botanical blend designed for nourishment, softness, and a naturally radiant finish.",
-        ingredient_1_title: "Noni Oil",
-        ingredient_1_copy: "Traditionally valued in tropical skincare and the signature botanical ingredient in this formula.",
-        ingredient_2_title: "Coconut Oil",
-        ingredient_2_copy: "Adds a rich, comforting feel and supports a softer-looking finish.",
-        ingredient_3_title: "Marula Oil",
-        ingredient_3_copy: "Known for an elegant, silky texture that helps the blend feel lighter.",
-        ingredient_4_title: "Avocado Oil",
-        ingredient_4_copy: "A nourishing oil that helps dry skin feel softer and more supple.",
+        ingredients_eyebrow: "Ingredients & benefits",
+        ingredients_title: "Botanical care with a luxury skin feel.",
+        ingredients_intro: "Noni Atara is designed for people who want a nourishing face oil without a heavy, shiny, or synthetic finish.",
+        ingredient_1_title: "Cold-pressed noni seed oil",
+        ingredient_1_copy: "The hero of the formula: a botanical oil that helps skin feel nourished and cared for.",
+        ingredient_2_title: "Citrus peel extract",
+        ingredient_2_copy: "Added for a fresh, natural glow and a radiant-looking finish.",
+        ingredient_3_title: "Lightweight texture",
+        ingredient_3_copy: "Fast-absorbing and ideal as the final step after moisturizer.",
 
         how_eyebrow: "How to use",
         how_title: "The final step in your skincare routine.",
@@ -1407,24 +1397,24 @@
         order_bottle_cta: "Order your bottle",
         step_1_title: "Cleanse",
         step_1_copy: "Start with clean skin.",
-        step_2_title: "Use toner or mist",
-        step_2_copy: "Add light hydration before sealing it in.",
-        step_3_title: "Apply serum",
-        step_3_copy: "Use your treatment step first, if it is part of your routine.",
-        step_4_title: "Moisturize",
-        step_4_copy: "Use your cream or lotion before face oil.",
-        step_5_title: "Seal with face oil",
-        step_5_copy: "Warm 1–2 drops between your palms and gently press into the skin.",
+        step_2_title: "Hydrate",
+        step_2_copy: "Use toner, mist, serum, or moisturizer as normal.",
+        step_3_title: "Apply 1–2 drops",
+        step_3_copy: "Warm the oil between your palms.",
+        step_4_title: "Press gently in",
+        step_4_copy: "Do not rub harshly; gently press the oil into the skin.",
+        step_5_title: "Use day or night",
+        step_5_copy: "During the day, always pair with SPF as your final protection.",
 
         fit_eyebrow: "Before you order",
         fit_title: "Is Noni Atara right for you?",
-        fit_intro: "The best skincare experience starts with clear expectations.",
+        fit_intro: "Clear expectations create more trust and a better skincare experience.",
         best_for_title: "Best for",
         best_for_1: "Dry or dull-looking skin",
-        best_for_2: "Skin that feels tight after cleansing",
-        best_for_3: "Evening routines",
+        best_for_2: "Sensitive skin that needs comfort",
+        best_for_3: "Mature skin and age-beautifully routines",
         best_for_4: "Anyone who wants a soft, nourished glow",
-        best_for_5: "People who enjoy simple botanical skincare",
+        best_for_5: "People who enjoy luxury botanical skincare",
         careful_title: "Use with care if",
         careful_1: "Your skin is very oily or acne-prone",
         careful_2: "You are sensitive to botanical oils",
@@ -1434,7 +1424,7 @@
 
         reviews_eyebrow: "Trust",
         reviews_title: "Made for real routines.",
-        reviews_intro: "Add real verified reviews here once customer feedback is available. The examples below show the recommended format.",
+        reviews_intro: "Add real verified reviews here once customer feedback is available.",
         review_1: "“My skin feels softer without feeling oily. I use it at night after my moisturizer.”",
         review_2: "“I only need a few drops. It gives my skin a healthy glow.”",
         review_3: "“The texture feels rich but not heavy. It has become my final step.”",
@@ -1452,11 +1442,11 @@
         faq_title: "Before you order",
         faq_intro: "Quick answers to common questions before starting your ritual.",
         faq_1_q: "Is Noni Atara suitable for all skin types?",
-        faq_1_a: "It is best suited for normal, dry, dull, or tired-looking skin. If your skin is very oily, acne-prone, or sensitive, patch test first and start with a small amount.",
+        faq_1_a: "It is best suited for normal, dry, dull, sensitive, or tired-looking skin. If your skin is very oily, acne-prone, or sensitive, patch test first.",
         faq_2_q: "How much should I use?",
         faq_2_a: "Start with 1–2 drops. Warm the oil between your palms and gently press it into the skin as the final step in your routine.",
         faq_3_q: "Do I use it before or after moisturizer?",
-        faq_3_a: "Use it after moisturizer. Face oil works best as the final sealing step in your routine.",
+        faq_3_a: "Use it after moisturizer. Face oil works best as the final sealing step.",
         faq_4_q: "Can I use it during the day?",
         faq_4_a: "Yes. Use a small amount during the day if your skin needs extra comfort or glow. In the morning, always finish with sunscreen.",
         faq_5_q: "How do I order?",
@@ -1465,14 +1455,13 @@
         final_eyebrow: "Ready to begin your ritual?",
         final_title: "Give your skin its final nourishing step.",
         final_copy: "Order Noni Atara Face Oil today and bring a soft, botanical glow into your skincare routine.",
-        footer: "© 2026 Mipro Atara. Botanical skincare for intentional routines.",
-        mobile_sticky: "Order Noni Atara Face Oil"
+        footer: "© 2026 Mipro. Botanical skincare for intentional routines.",
+        mobile_sticky: "Order Noni Atara"
       }
     };
 
     function setLanguage(lang) {
       const dictionary = translations[lang];
-
       document.documentElement.lang = lang;
 
       document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -1482,18 +1471,22 @@
         }
       });
 
-      document.querySelectorAll("[data-i18n-content]").forEach((element) => {
-        const key = element.getAttribute("data-i18n-content");
-        if (dictionary[key]) {
-          element.setAttribute("content", dictionary[key]);
-        }
-      });
-
-      document.title = dictionary.meta_title;
-
       document.querySelectorAll(".lang-btn").forEach((button) => {
         button.classList.toggle("active", button.dataset.lang === lang);
       });
+
+      document.title =
+        lang === "nl"
+          ? "Mipro Noni Atara Face Oil | Surinaamse botanische huidverzorging"
+          : "Mipro Noni Atara Face Oil | Surinamese Botanical Skincare";
+
+      const metaDescription = document.querySelector('meta[name="description"]');
+      metaDescription.setAttribute(
+        "content",
+        lang === "nl"
+          ? "Een luxe Surinaamse botanische gezichtsolie met noni, citrus peel extract en een lichte, snel absorberende textuur."
+          : "A luxury Surinamese botanical face oil with noni, citrus peel extract, and a lightweight, fast-absorbing texture."
+      );
 
       localStorage.setItem("mipro_language", lang);
     }
