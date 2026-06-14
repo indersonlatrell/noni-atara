@@ -258,13 +258,18 @@
       overflow: hidden;
       box-shadow: 0 34px 90px rgba(0, 0, 0, 0.28);
       border: 1px solid rgba(247, 241, 231, 0.16);
-      background: rgba(255, 255, 255, 0.06);
+      background: #f4eadc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 560px;
+      margin-left: auto;
     }
 
     .hero-image img {
       width: 100%;
-      height: min(720px, 78vh);
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
       object-position: center;
     }
 
@@ -302,8 +307,8 @@
     }
 
     .order-image {
-      background: var(--warm-cream);
-      min-height: 520px;
+      background: #f4eadc;
+      min-height: auto;
     }
 
     .order-image img {
@@ -404,9 +409,9 @@
 
     .showcase-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 44px;
-      align-items: center;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 56px;
+      align-items: start;
     }
 
     .showcase-image {
@@ -414,11 +419,19 @@
       overflow: hidden;
       box-shadow: var(--shadow);
       border: 1px solid rgba(36, 22, 13, 0.08);
+      background: #f4eadc;
+      margin-top: 8px;
     }
 
     .showcase-image img {
       width: 100%;
       height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .showcase-copy {
+      max-width: 560px;
     }
 
     .showcase-copy h2 {
@@ -701,13 +714,31 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-image {
+        max-width: 100%;
+        margin-left: 0;
+      }
+
       .hero-image img {
+        width: 100%;
         height: auto;
+      }
+
+      .showcase-copy {
+        max-width: none;
+      }
+
+      .showcase-image {
+        margin-top: 0;
       }
 
       .order-image,
       .order-image img {
         min-height: unset;
+      }
+
+      .order-image img {
+        height: auto;
       }
 
       section {
@@ -835,8 +866,10 @@
         <div class="hero-image">
           <img
             src="images/mipro-age-beautifully.png"
-            alt="Mipro Noni Atara Face Oil met botanische ingrediënten en de tekst Age Beautifully"
+            alt="Mipro Noni Atara Face Oil met botanische ingrediënten"
             loading="eager"
+            width="768"
+            height="1344"
           />
         </div>
       </div>
@@ -859,6 +892,8 @@
               src="images/mipro-flatlay.png"
               alt="Mipro Noni Atara Face Oil met noni, citrus peel en botanische bladeren"
               loading="lazy"
+              width="1024"
+              height="1024"
             />
           </div>
 
@@ -947,8 +982,10 @@
         <div class="showcase-image">
           <img
             src="images/mipro-callouts.png"
-            alt="Mipro Noni Atara Face Oil met callouts: noni seed oil, citrus peel extract, licht en snel absorberend, geen fillers"
+            alt="Mipro Noni Atara Face Oil met voordelen: noni seed oil, citrus peel extract, lichte textuur en geen synthetische geur"
             loading="lazy"
+            width="1024"
+            height="1024"
           />
         </div>
 
