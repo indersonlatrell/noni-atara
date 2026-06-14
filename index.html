@@ -277,6 +277,57 @@
       padding: 86px 0;
     }
 
+    .hero-proof {
+      background: var(--cream);
+      margin-top: -34px;
+      padding: 0 0 52px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .proof-card {
+      background: var(--white);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      padding: 24px 30px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .proof-quote {
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      line-height: 1.25;
+      color: var(--brown);
+    }
+
+    .proof-meta {
+      font: 700 0.82rem Arial, sans-serif;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 8px;
+    }
+
+    .proof-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      font-family: Arial, sans-serif;
+    }
+
+    .proof-point {
+      background: var(--warm-cream);
+      color: var(--brown);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
     .section-title {
       text-align: center;
       max-width: 760px;
@@ -342,6 +393,37 @@
       margin-bottom: 24px;
     }
 
+    .order-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 22px 0 26px;
+      font-family: Arial, sans-serif;
+    }
+
+    .meta-box {
+      background: var(--cream);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .meta-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .meta-value {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--brown);
+    }
+
     .benefit-list {
       display: grid;
       gap: 12px;
@@ -373,6 +455,47 @@
     .microcopy {
       font: 600 0.85rem Arial, sans-serif;
       color: var(--muted);
+    }
+
+    .scarcity-line {
+      margin-top: 14px;
+      background: rgba(196, 154, 69, 0.14);
+      color: var(--brown);
+      border: 1px solid rgba(196, 154, 69, 0.32);
+      border-radius: 14px;
+      padding: 13px 15px;
+      font: 700 0.9rem Arial, sans-serif;
+    }
+
+    .conversion-band {
+      background: var(--warm-cream);
+      padding: 54px 0;
+    }
+
+    .conversion-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .conversion-card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 10px 28px rgba(36, 22, 13, 0.05);
+    }
+
+    .conversion-card h3 {
+      font-size: 1.45rem;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .conversion-card p {
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      font-size: 0.98rem;
     }
 
     .features {
@@ -584,6 +707,51 @@
       padding-left: 18px;
     }
 
+    .objection-box {
+      margin-top: 28px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid rgba(36, 22, 13, 0.08);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .objection-box h3 {
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .objection-list {
+      display: grid;
+      gap: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .objection-list li {
+      list-style: none;
+      color: var(--muted);
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+    }
+
+    .objection-list li::before {
+      content: "✓";
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--deep-green);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
     .testimonial-section {
       background: var(--warm-cream);
     }
@@ -713,198 +881,6 @@
       display: none;
     }
 
-        .hero-proof {
-      background: var(--cream);
-      margin-top: -34px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .proof-card {
-      background: var(--white);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(36, 22, 13, 0.08);
-      padding: 24px 30px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .proof-quote {
-      font-size: clamp(1.2rem, 2vw, 1.55rem);
-      line-height: 1.25;
-      color: var(--brown);
-    }
-
-    .proof-meta {
-      font: 700 0.82rem Arial, sans-serif;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 8px;
-    }
-
-    .proof-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-end;
-      font-family: Arial, sans-serif;
-    }
-
-    .proof-point {
-      background: var(--warm-cream);
-      color: var(--brown);
-      border-radius: 999px;
-      padding: 9px 13px;
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-
-    .order-meta {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin: 22px 0 26px;
-      font-family: Arial, sans-serif;
-    }
-
-    .meta-box {
-      background: var(--cream);
-      border: 1px solid rgba(36, 22, 13, 0.08);
-      border-radius: 14px;
-      padding: 14px;
-    }
-
-    .meta-label {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 3px;
-    }
-
-    .meta-value {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--brown);
-    }
-
-    .scarcity-line {
-      margin-top: 14px;
-      background: rgba(196, 154, 69, 0.14);
-      color: var(--brown);
-      border: 1px solid rgba(196, 154, 69, 0.32);
-      border-radius: 14px;
-      padding: 13px 15px;
-      font: 700 0.9rem Arial, sans-serif;
-    }
-
-    .conversion-band {
-      background: var(--warm-cream);
-      padding: 54px 0;
-    }
-
-    .conversion-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .conversion-card {
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(36, 22, 13, 0.08);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 10px 28px rgba(36, 22, 13, 0.05);
-    }
-
-    .conversion-card h3 {
-      font-size: 1.45rem;
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .conversion-card p {
-      font-family: Arial, sans-serif;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .objection-box {
-      margin-top: 28px;
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: clamp(28px, 4vw, 44px);
-      border: 1px solid rgba(36, 22, 13, 0.08);
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .objection-box h3 {
-      font-size: clamp(1.8rem, 3vw, 3rem);
-      line-height: 1;
-      letter-spacing: -0.035em;
-    }
-
-    .objection-list {
-      display: grid;
-      gap: 14px;
-      font-family: Arial, sans-serif;
-    }
-
-    .objection-list li {
-      list-style: none;
-      color: var(--muted);
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 10px;
-    }
-
-    .objection-list li::before {
-      content: "✓";
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: var(--gold);
-      color: var(--deep-green);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-    }
-
-    @media (max-width: 900px) {
-      .proof-card,
-      .objection-box {
-        grid-template-columns: 1fr;
-      }
-
-      .proof-points {
-        justify-content: flex-start;
-      }
-
-      .conversion-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .proof-card {
-        padding: 22px;
-      }
-
-      .order-meta {
-        grid-template-columns: 1fr;
-      }
-    }
-
     @media (max-width: 1040px) {
       .nav-links {
         display: none;
@@ -933,18 +909,15 @@
       .how-grid,
       .who-grid,
       .testimonial-grid,
-      .delivery-card {
+      .delivery-card,
+      .proof-card,
+      .objection-box {
         grid-template-columns: 1fr;
       }
 
       .hero-image {
         max-width: 100%;
         margin-left: 0;
-      }
-
-      .hero-image img {
-        width: 100%;
-        height: auto;
       }
 
       .order-image,
@@ -956,8 +929,20 @@
         height: auto;
       }
 
+      .proof-points {
+        justify-content: flex-start;
+      }
+
+      .conversion-grid {
+        grid-template-columns: 1fr;
+      }
+
       section {
         padding: 64px 0;
+      }
+
+      .hero-proof {
+        padding: 0 0 44px;
       }
 
       .image-showcase {
@@ -998,6 +983,10 @@
         letter-spacing: 0.16em;
       }
 
+      h1 {
+        font-size: clamp(2.65rem, 13vw, 4.4rem);
+      }
+
       .feature-grid {
         grid-template-columns: 1fr;
       }
@@ -1018,6 +1007,14 @@
 
       .trust-pill {
         font-size: 0.78rem;
+      }
+
+      .proof-card {
+        padding: 22px;
+      }
+
+      .order-meta {
+        grid-template-columns: 1fr;
       }
 
       .ingredient-checklist li {
@@ -1058,86 +1055,35 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow" data-i18n="hero_eyebrow">
-            Cold-pressed botanical face oil
+            Surinaamse botanische gezichtsolie
           </div>
 
           <h1 data-i18n="hero_title">
-            Age beautifully.
+            Geef je huid een zachte, natuurlijke glow.
           </h1>
 
           <p class="hero-copy" data-i18n="hero_copy">
-            Luxe botanische voeding voor de gevoelige huid. Noni Atara is een lichte,
-            snel absorberende gezichtsolie met noni seed oil en citrus peel extract
-            voor een natuurlijke, gezonde glow.
+            Noni Atara Face Oil is een lichte botanische gezichtsolie voor een droge,
+            doffe of trekkerige huid — gemaakt om je huid comfortabeler, soepeler en
+            stralender te laten aanvoelen zonder zwaar vet gevoel.
           </p>
 
-          <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow" data-i18n="hero_eyebrow">
-        Surinaamse botanische gezichtsolie
-      </div>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary" data-i18n="hero_cta_primary" data-whatsapp-order>
+              Shop Noni Atara Face Oil
+            </a>
+            <a href="#ingredients" class="btn btn-secondary" data-i18n="hero_cta_secondary">
+              Bekijk ingrediënten
+            </a>
+          </div>
 
-      <h1 data-i18n="hero_title">
-        Geef je huid een zachte, natuurlijke glow.
-      </h1>
-
-      <p class="hero-copy" data-i18n="hero_copy">
-        Noni Atara Face Oil is een lichte botanische gezichtsolie voor een droge,
-        doffe of trekkerige huid — gemaakt om je huid comfortabeler, soepeler en
-        stralender te laten aanvoelen zonder zwaar vet gevoel.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#" class="btn btn-primary" data-i18n="hero_cta_primary" data-whatsapp-order>
-          Shop Noni Atara Face Oil
-        </a>
-        <a href="#ingredients" class="btn btn-secondary" data-i18n="hero_cta_secondary">
-          Bekijk ingrediënten
-        </a>
-      </div>
-
-      <div class="trust-row" aria-label="Product highlights">
-        <span class="trust-pill" data-i18n="trust_1">Voor droge & doffe huid</span>
-        <span class="trust-pill" data-i18n="trust_2">1–2 druppels per gebruik</span>
-        <span class="trust-pill" data-i18n="trust_3">Levering Paramaribo + SRD 100</span>
-        <span class="trust-pill" data-i18n="trust_4">Bestellen via WhatsApp</span>
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <img
-        src="images/mipro-age-beautifully.png"
-        alt="Mipro Noni Atara Face Oil met botanische ingrediënten"
-        loading="eager"
-        width="768"
-        height="1344"
-      />
-    </div>
-  </div>
-</section>
-          <section class="hero-proof">
-  <div class="container">
-    <div class="proof-card">
-      <div>
-        <div class="stars">★★★★★</div>
-        <div class="proof-quote" data-i18n="proof_quote">
-          “Mijn huid voelt zachter zonder vettig aan te voelen.”
+          <div class="trust-row" aria-label="Product highlights">
+            <span class="trust-pill" data-i18n="trust_1">Voor droge & doffe huid</span>
+            <span class="trust-pill" data-i18n="trust_2">1–2 druppels per gebruik</span>
+            <span class="trust-pill" data-i18n="trust_3">Levering Paramaribo + SRD 100</span>
+            <span class="trust-pill" data-i18n="trust_4">Bestellen via WhatsApp</span>
+          </div>
         </div>
-        <div class="proof-meta" data-i18n="proof_meta">
-          Voeg hier echte klantreview toe zodra beschikbaar
-        </div>
-      </div>
-
-      <div class="proof-points">
-        <span class="proof-point" data-i18n="proof_1">Lichte glow-finish</span>
-        <span class="proof-point" data-i18n="proof_2">Geen synthetische geur</span>
-        <span class="proof-point" data-i18n="proof_3">Patch test aanbevolen</span>
-        <span class="proof-point" data-i18n="proof_4">Veilig bestellen via WhatsApp</span>
-      </div>
-    </div>
-  </div>
-</section>
 
         <div class="hero-image">
           <img
@@ -1147,6 +1093,29 @@
             width="768"
             height="1344"
           />
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-proof">
+      <div class="container">
+        <div class="proof-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="proof-quote" data-i18n="proof_quote">
+              “Mijn huid voelt zachter zonder vettig aan te voelen.”
+            </div>
+            <div class="proof-meta" data-i18n="proof_meta">
+              Voeg hier echte klantreview toe zodra beschikbaar
+            </div>
+          </div>
+
+          <div class="proof-points">
+            <span class="proof-point" data-i18n="proof_1">Lichte glow-finish</span>
+            <span class="proof-point" data-i18n="proof_2">Geen synthetische geur</span>
+            <span class="proof-point" data-i18n="proof_3">Patch test aanbevolen</span>
+            <span class="proof-point" data-i18n="proof_4">Veilig bestellen via WhatsApp</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1176,20 +1145,42 @@
           <div class="order-content">
             <div class="eyebrow">Mipro</div>
             <h2 data-i18n="product_name">Noni Atara Face Oil</h2>
-            <div class="price" data-i18n="price_line">SRD 350 · Levering + SRD 100</div>
+            <div class="price" data-i18n="price_line">SRD 350 · Levering Paramaribo + SRD 100</div>
 
             <p data-i18n="order_copy">
-              Een cold-pressed botanische gezichtsolie voor huid die droog, gevoelig,
-              dof of vermoeid aanvoelt. Gebruik 1–2 druppels als laatste stap in je
-              ochtend- of avondroutine.
+              Een luxe botanische gezichtsolie voor huid die droog, gevoelig, dof of vermoeid
+              aanvoelt. Gebruik 1–2 druppels als laatste stap na je moisturizer voor een zachte,
+              gevoede glow.
             </p>
 
+            <div class="order-meta" aria-label="Product details">
+              <div class="meta-box">
+                <span class="meta-label" data-i18n="meta_best_for_label">Beste voor</span>
+                <span class="meta-value" data-i18n="meta_best_for_value">Droge, doffe huid</span>
+              </div>
+
+              <div class="meta-box">
+                <span class="meta-label" data-i18n="meta_texture_label">Textuur</span>
+                <span class="meta-value" data-i18n="meta_texture_value">Licht & snel absorberend</span>
+              </div>
+
+              <div class="meta-box">
+                <span class="meta-label" data-i18n="meta_use_label">Gebruik</span>
+                <span class="meta-value" data-i18n="meta_use_value">1–2 druppels</span>
+              </div>
+
+              <div class="meta-box">
+                <span class="meta-label" data-i18n="meta_order_label">Bestellen</span>
+                <span class="meta-value" data-i18n="meta_order_value">Via WhatsApp</span>
+              </div>
+            </div>
+
             <ul class="benefit-list">
-              <li data-i18n="benefit_1">Cold-pressed noni seed oil, rijk aan antioxidanten</li>
-              <li data-i18n="benefit_2">Citrus peel extract voor een natuurlijke radiant glow</li>
-              <li data-i18n="benefit_3">Lichte, snel absorberende textuur</li>
-              <li data-i18n="benefit_4">Geen fillers en geen synthetische fragrance</li>
-              <li data-i18n="benefit_5">Levering binnen Paramaribo + SRD 100</li>
+              <li data-i18n="benefit_1">Helpt de huid zachter en comfortabeler aan te laten voelen</li>
+              <li data-i18n="benefit_2">Geeft een natuurlijke glow zonder zware, vettige finish</li>
+              <li data-i18n="benefit_3">Ideaal als laatste stap na moisturizer</li>
+              <li data-i18n="benefit_4">Met noni seed oil en citrus peel extract</li>
+              <li data-i18n="benefit_5">Bestel eenvoudig via WhatsApp</li>
             </ul>
 
             <div class="order-actions">
@@ -1202,10 +1193,41 @@
             </div>
 
             <div class="microcopy" data-i18n="microcopy">
-              Patch test aanbevolen. Start met 1–2 druppels. Stuur ons gerust een bericht
-              als je twijfelt of deze olie past bij jouw huidtype.
+              Patch test aanbevolen. Start met 1–2 druppels. Twijfel je of deze olie past bij jouw huid?
+              Stuur ons eerst een bericht.
+            </div>
+
+            <div class="scarcity-line" data-i18n="scarcity_line">
+              Kleine launch batch beschikbaar — bestel zolang de voorraad loopt.
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conversion-band">
+      <div class="container">
+        <div class="conversion-grid">
+          <article class="conversion-card">
+            <h3 data-i18n="conv_1_title">Voedt zonder zwaar gevoel</h3>
+            <p data-i18n="conv_1_copy">
+              Ontworpen voor comfort, glow en zachtheid zonder een dikke of vettige laag.
+            </p>
+          </article>
+
+          <article class="conversion-card">
+            <h3 data-i18n="conv_2_title">Past makkelijk in je routine</h3>
+            <p data-i18n="conv_2_copy">
+              Gebruik 1–2 druppels na je moisturizer, overdag of ’s avonds als laatste stap.
+            </p>
+          </article>
+
+          <article class="conversion-card">
+            <h3 data-i18n="conv_3_title">Ideaal voor een glow ritual</h3>
+            <p data-i18n="conv_3_copy">
+              Perfect voor een korte gezichtsmassage of als luxe afsluiting van je skincare.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -1304,7 +1326,7 @@
 
           <div class="showcase-actions">
             <a href="#" class="btn btn-primary" data-i18n="hero_cta_primary" data-whatsapp-order>
-              Bestel Noni Atara
+              Shop Noni Atara Face Oil
             </a>
             <a href="#how-to-use" class="btn btn-dark-outline" data-i18n="nav_how">
               Gebruik
@@ -1400,6 +1422,28 @@
               <li data-i18n="careful_5">Je bekende ingrediëntgevoeligheden hebt</li>
             </ul>
           </article>
+        </div>
+
+        <div class="objection-box">
+          <div>
+            <div class="eyebrow" data-i18n="objection_eyebrow">Twijfel je nog?</div>
+            <h3 data-i18n="objection_title">Dit wil je waarschijnlijk weten vóór je bestelt.</h3>
+          </div>
+
+          <ul class="objection-list">
+            <li data-i18n="objection_1">
+              Het is een gezichtsolie, maar bedoeld voor een lichte finish — begin met slechts 1 druppel.
+            </li>
+            <li data-i18n="objection_2">
+              Gebruik het na moisturizer, niet ervoor, zodat het je routine mooi afsluit.
+            </li>
+            <li data-i18n="objection_3">
+              Heb je een acnegevoelige of zeer reactieve huid? Doe eerst een patch test.
+            </li>
+            <li data-i18n="objection_4">
+              Twijfel je over je huidtype? Stel eerst je vraag via WhatsApp voordat je bestelt.
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -1550,30 +1594,56 @@
         nav_faq: "FAQ",
         nav_order: "Bestel nu",
 
-        hero_eyebrow: "Cold-pressed botanische gezichtsolie",
-        hero_title: "Age beautifully.",
-        hero_copy: "Luxe botanische voeding voor de gevoelige huid. Noni Atara is een lichte, snel absorberende gezichtsolie met noni seed oil en citrus peel extract voor een natuurlijke, gezonde glow.",
-        hero_cta_primary: "Bestel Noni Atara",
-        hero_cta_secondary: "Bekijk voordelen",
-        trust_1: "Licht & snel absorberend",
-        trust_2: "Geen synthetische geur",
-        trust_3: "Levering binnen Paramaribo + SRD 100",
+        hero_eyebrow: "Surinaamse botanische gezichtsolie",
+        hero_title: "Geef je huid een zachte, natuurlijke glow.",
+        hero_copy: "Noni Atara Face Oil is een lichte botanische gezichtsolie voor een droge, doffe of trekkerige huid — gemaakt om je huid comfortabeler, soepeler en stralender te laten aanvoelen zonder zwaar vet gevoel.",
+        hero_cta_primary: "Shop Noni Atara Face Oil",
+        hero_cta_secondary: "Bekijk ingrediënten",
+        trust_1: "Voor droge & doffe huid",
+        trust_2: "1–2 druppels per gebruik",
+        trust_3: "Levering Paramaribo + SRD 100",
+        trust_4: "Bestellen via WhatsApp",
+
+        proof_quote: "“Mijn huid voelt zachter zonder vettig aan te voelen.”",
+        proof_meta: "Voeg hier echte klantreview toe zodra beschikbaar",
+        proof_1: "Lichte glow-finish",
+        proof_2: "Geen synthetische geur",
+        proof_3: "Patch test aanbevolen",
+        proof_4: "Veilig bestellen via WhatsApp",
 
         product_name: "Noni Atara Face Oil",
-        price_line: "SRD 350 · Levering + SRD 100",
+        price_line: "SRD 350 · Levering Paramaribo + SRD 100",
 
         order_eyebrow: "Bestel je flesje",
         order_title: "Voeding, glow en comfort in één laatste stap.",
         order_intro: "Gemaakt om je huid zacht te laten aanvoelen, een natuurlijke glow te geven en je skincare routine mooi af te sluiten.",
-        order_copy: "Een cold-pressed botanische gezichtsolie voor huid die droog, gevoelig, dof of vermoeid aanvoelt. Gebruik 1–2 druppels als laatste stap in je ochtend- of avondroutine.",
-        benefit_1: "Cold-pressed noni seed oil, rijk aan antioxidanten",
-        benefit_2: "Citrus peel extract voor een natuurlijke radiant glow",
-        benefit_3: "Lichte, snel absorberende textuur",
-        benefit_4: "Geen fillers en geen synthetische fragrance",
-        benefit_5: "Levering binnen Paramaribo + SRD 100",
+        order_copy: "Een luxe botanische gezichtsolie voor huid die droog, gevoelig, dof of vermoeid aanvoelt. Gebruik 1–2 druppels als laatste stap na je moisturizer voor een zachte, gevoede glow.",
+
+        meta_best_for_label: "Beste voor",
+        meta_best_for_value: "Droge, doffe huid",
+        meta_texture_label: "Textuur",
+        meta_texture_value: "Licht & snel absorberend",
+        meta_use_label: "Gebruik",
+        meta_use_value: "1–2 druppels",
+        meta_order_label: "Bestellen",
+        meta_order_value: "Via WhatsApp",
+
+        benefit_1: "Helpt de huid zachter en comfortabeler aan te laten voelen",
+        benefit_2: "Geeft een natuurlijke glow zonder zware, vettige finish",
+        benefit_3: "Ideaal als laatste stap na moisturizer",
+        benefit_4: "Met noni seed oil en citrus peel extract",
+        benefit_5: "Bestel eenvoudig via WhatsApp",
         whatsapp_cta: "Bestel via WhatsApp",
         questions_cta: "Eerst vragen?",
-        microcopy: "Patch test aanbevolen. Start met 1–2 druppels. Stuur ons gerust een bericht als je twijfelt of deze olie past bij jouw huidtype.",
+        microcopy: "Patch test aanbevolen. Start met 1–2 druppels. Twijfel je of deze olie past bij jouw huid? Stuur ons eerst een bericht.",
+        scarcity_line: "Kleine launch batch beschikbaar — bestel zolang de voorraad loopt.",
+
+        conv_1_title: "Voedt zonder zwaar gevoel",
+        conv_1_copy: "Ontworpen voor comfort, glow en zachtheid zonder een dikke of vettige laag.",
+        conv_2_title: "Past makkelijk in je routine",
+        conv_2_copy: "Gebruik 1–2 druppels na je moisturizer, overdag of ’s avonds als laatste stap.",
+        conv_3_title: "Ideaal voor een glow ritual",
+        conv_3_copy: "Perfect voor een korte gezichtsmassage of als luxe afsluiting van je skincare.",
 
         features_eyebrow: "Waarom je huid dit voelt",
         features_title: "Luxe botanische verzorging zonder zwaarte.",
@@ -1628,6 +1698,13 @@
         careful_4: "Je nog nooit face oil hebt gebruikt",
         careful_5: "Je bekende ingrediëntgevoeligheden hebt",
 
+        objection_eyebrow: "Twijfel je nog?",
+        objection_title: "Dit wil je waarschijnlijk weten vóór je bestelt.",
+        objection_1: "Het is een gezichtsolie, maar bedoeld voor een lichte finish — begin met slechts 1 druppel.",
+        objection_2: "Gebruik het na moisturizer, niet ervoor, zodat het je routine mooi afsluit.",
+        objection_3: "Heb je een acnegevoelige of zeer reactieve huid? Doe eerst een patch test.",
+        objection_4: "Twijfel je over je huidtype? Stel eerst je vraag via WhatsApp voordat je bestelt.",
+
         reviews_eyebrow: "Vertrouwen",
         reviews_title: "Gemaakt voor echte routines.",
         reviews_intro: "Voeg hier echte geverifieerde reviews toe zodra klantfeedback beschikbaar is.",
@@ -1673,30 +1750,56 @@
         nav_faq: "FAQ",
         nav_order: "Order now",
 
-        hero_eyebrow: "Cold-pressed botanical face oil",
-        hero_title: "Age beautifully.",
-        hero_copy: "Luxury botanical nourishment for sensitive skin. Noni Atara is a lightweight, fast-absorbing face oil with noni seed oil and citrus peel extract for a natural, healthy glow.",
-        hero_cta_primary: "Order Noni Atara",
-        hero_cta_secondary: "See benefits",
-        trust_1: "Lightweight & fast-absorbing",
-        trust_2: "No synthetic fragrance",
-        trust_3: "Delivery within Paramaribo + SRD 100",
+        hero_eyebrow: "Surinamese botanical face oil",
+        hero_title: "Give your skin a soft, natural glow.",
+        hero_copy: "Noni Atara Face Oil is a lightweight botanical face oil for dry, dull, or tight-feeling skin — made to help your skin feel more comfortable, softer, and more radiant without a heavy greasy feel.",
+        hero_cta_primary: "Shop Noni Atara Face Oil",
+        hero_cta_secondary: "View ingredients",
+        trust_1: "For dry & dull skin",
+        trust_2: "1–2 drops per use",
+        trust_3: "Paramaribo delivery + SRD 100",
+        trust_4: "Order via WhatsApp",
+
+        proof_quote: "“My skin feels softer without feeling oily.”",
+        proof_meta: "Add a real customer review here once available",
+        proof_1: "Light glow finish",
+        proof_2: "No synthetic fragrance",
+        proof_3: "Patch test recommended",
+        proof_4: "Secure WhatsApp ordering",
 
         product_name: "Noni Atara Face Oil",
-        price_line: "SRD 350 · Delivery + SRD 100",
+        price_line: "SRD 350 · Paramaribo delivery + SRD 100",
 
         order_eyebrow: "Order your bottle",
         order_title: "Nourishment, glow, and comfort in one final step.",
         order_intro: "Made to help skin feel softer, reveal a natural glow, and beautifully finish your skincare routine.",
-        order_copy: "A cold-pressed botanical face oil for skin that feels dry, sensitive, dull, or tired. Use 1–2 drops as the final step in your morning or evening routine.",
-        benefit_1: "Cold-pressed noni seed oil, rich in antioxidants",
-        benefit_2: "Citrus peel extract for natural radiance",
-        benefit_3: "Lightweight, fast-absorbing texture",
-        benefit_4: "No fillers and no synthetic fragrance",
-        benefit_5: "Delivery within Paramaribo + SRD 100",
+        order_copy: "A luxury botanical face oil for skin that feels dry, sensitive, dull, or tired. Use 1–2 drops as the final step after moisturizer for a soft, nourished glow.",
+
+        meta_best_for_label: "Best for",
+        meta_best_for_value: "Dry, dull skin",
+        meta_texture_label: "Texture",
+        meta_texture_value: "Light & fast-absorbing",
+        meta_use_label: "Use",
+        meta_use_value: "1–2 drops",
+        meta_order_label: "Order",
+        meta_order_value: "Via WhatsApp",
+
+        benefit_1: "Helps skin feel softer and more comfortable",
+        benefit_2: "Gives a natural glow without a heavy, greasy finish",
+        benefit_3: "Ideal as the final step after moisturizer",
+        benefit_4: "With noni seed oil and citrus peel extract",
+        benefit_5: "Order easily via WhatsApp",
         whatsapp_cta: "Order via WhatsApp",
         questions_cta: "Questions first?",
-        microcopy: "Patch test recommended. Start with 1–2 drops. Message us if you are unsure whether this oil suits your skin type.",
+        microcopy: "Patch test recommended. Start with 1–2 drops. Unsure if this oil suits your skin? Message us first.",
+        scarcity_line: "Small launch batch available — order while stock lasts.",
+
+        conv_1_title: "Nourishes without heaviness",
+        conv_1_copy: "Designed for comfort, glow, and softness without a thick or greasy layer.",
+        conv_2_title: "Fits easily into your routine",
+        conv_2_copy: "Use 1–2 drops after moisturizer, day or night, as your final step.",
+        conv_3_title: "Ideal for a glow ritual",
+        conv_3_copy: "Perfect for a short facial massage or as a luxurious finish to your skincare.",
 
         features_eyebrow: "Why your skin feels it",
         features_title: "Luxury botanical care without heaviness.",
@@ -1750,6 +1853,13 @@
         careful_3: "You use strong active ingredients or treatments",
         careful_4: "You have never used face oil before",
         careful_5: "You have known ingredient sensitivities",
+
+        objection_eyebrow: "Still unsure?",
+        objection_title: "Here’s what you probably want to know before ordering.",
+        objection_1: "It is a face oil, but designed for a light finish — start with just 1 drop.",
+        objection_2: "Use it after moisturizer, not before, so it beautifully seals your routine.",
+        objection_3: "If your skin is acne-prone or highly reactive, patch test first.",
+        objection_4: "Unsure about your skin type? Ask your question on WhatsApp before ordering.",
 
         reviews_eyebrow: "Trust",
         reviews_title: "Made for real routines.",
