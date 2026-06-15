@@ -317,6 +317,11 @@
       margin-top: 8px;
     }
 
+    .proof-meta:empty,
+    .section-title p:empty {
+      display: none;
+    }
+
     .proof-points {
       display: flex;
       flex-wrap: wrap;
@@ -755,13 +760,14 @@
     }
 
     .testimonial span {
-  color: var(--muted);
-  font: 800 0.78rem Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-  display: inline-block;
-}
+      color: var(--muted);
+      font: 800 0.78rem Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
     .delivery {
       background: var(--brown);
       color: var(--cream);
@@ -1103,9 +1109,7 @@
             <div class="proof-quote" data-i18n="proof_quote">
               “Mijn huid voelt zachter zonder vettig aan te voelen.”
             </div>
-            <div class="proof-meta" data-i18n="proof_meta">
-              Voeg hier echte klantreview toe zodra beschikbaar
-            </div>
+            <div class="proof-meta" data-i18n="proof_meta"></div>
           </div>
 
           <div class="proof-points">
@@ -1453,8 +1457,6 @@
         <div class="section-title">
           <div class="eyebrow" data-i18n="reviews_eyebrow">Vertrouwen</div>
           <h2 data-i18n="reviews_title">Gemaakt voor echte routines.</h2>
-          <p data-i18n="reviews_intro">
-          </p>
         </div>
 
         <div class="testimonial-grid">
@@ -1617,7 +1619,7 @@
         trust_4: "Bestellen via WhatsApp",
 
         proof_quote: "“Mijn huid voelt zachter zonder vettig aan te voelen.”",
-        proof_meta: "Voeg hier echte klantreview toe zodra beschikbaar",
+        proof_meta: "",
         proof_1: "Lichte glow-finish",
         proof_2: "Met botanische oliën",
         proof_3: "Patch test aanbevolen",
@@ -1711,7 +1713,7 @@
 
         reviews_eyebrow: "Vertrouwen",
         reviews_title: "Gemaakt voor echte routines.",
-        reviews_intro: "Voeg hier echte geverifieerde reviews toe zodra klantfeedback beschikbaar is.",
+        reviews_intro: "",
         review_1: "“Mijn huid voelt zachter zonder vettig aan te voelen. Ik gebruik het ’s avonds na mijn moisturizer.”",
         review_2: "“Ik heb maar een paar druppels nodig. Het geeft mijn huid een gezonde glow.”",
         review_3: "“De textuur voelt rijk maar niet zwaar. Het is mijn vaste laatste stap geworden.”",
@@ -1765,7 +1767,7 @@
         trust_4: "Order via WhatsApp",
 
         proof_quote: "“My skin feels softer without feeling oily.”",
-        proof_meta: "Add a real customer review here once available",
+        proof_meta: "",
         proof_1: "Light glow finish",
         proof_2: "With botanical oils",
         proof_3: "Patch test recommended",
@@ -1859,7 +1861,7 @@
 
         reviews_eyebrow: "Trust",
         reviews_title: "Made for real routines.",
-        reviews_intro: "Add real verified reviews here once customer feedback is available.",
+        reviews_intro: "",
         review_1: "“My skin feels softer without feeling oily. I use it at night after my moisturizer.”",
         review_2: "“I only need a few drops. It gives my skin a healthy glow.”",
         review_3: "“The texture feels rich but not heavy. It has become my final step.”",
@@ -1901,7 +1903,7 @@
 
       document.querySelectorAll("[data-i18n]").forEach((element) => {
         const key = element.getAttribute("data-i18n");
-        if (dictionary[key]) {
+        if (dictionary[key] !== undefined) {
           element.textContent = dictionary[key];
         }
       });
